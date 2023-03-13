@@ -1,5 +1,5 @@
 # Robot Uprising
 
-* Main Page: <https://www.robotuprising.club>
-* Videos: <https://videos.robotuprising.club>
+* Main Page: <http://www.robotuprising.club>
+* Videos: <http://videos.robotuprising.club>
 
