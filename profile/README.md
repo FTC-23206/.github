@@ -1,5 +1,4 @@
 # Robot Uprising
 
-* Main Page: <http://www.robotuprising.club>
-* Videos: <http://videos.robotuprising.club> (<https://www.youtube.com/@ftcrobotuprising>)
-
+* Main Page: <http://www.automaducks.com>
+* Videos: <http://videos.automaducks.com> (<https://www.youtube.com/@automaducks>)
