@@ -1,4 +1,4 @@
 # Automaducks
 
-* Main Page: <http://www.automaducks.com>
+* Main Page: <https://www.automaducks.com>
 * Videos: <http://videos.automaducks.com> (<https://www.youtube.com/@automaducks>)
