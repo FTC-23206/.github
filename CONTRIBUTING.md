@@ -15,7 +15,7 @@ Try using markdown online: [Stack Edit](https://stackedit.io/app#)
 
 Clone the repository locally and open it in VSCode:
 
-```PS
+```PowerShell
 # Clone the Repository
 cd
 cd .\Repos
