@@ -63,4 +63,4 @@ See <https://jekyllrb.com/docs/posts/> for more information.
 
 ## Advanced
 
-It is much more convenient to render the website locally prior submitting a pull request when making large changes. This requires *Jeryll* to be installed locally. See <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll> for instructions.
+It is much more convenient to render the website locally prior submitting a pull request when making large changes. This requires *Jekyll* to be installed locally. See <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll> for instructions.
