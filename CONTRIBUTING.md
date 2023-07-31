@@ -33,9 +33,10 @@ code .
 | docs                      # WebSite code
 |  | _data
 |  |   | navigation.yml     # Navigation Menu
-|
+|  |
 |  | pages                  # WebSite Pages (Change navigation when adding new pages)
-|  |   | Odometry.md        # Sample page started for the team odometry
+|  |   | odometry.md        # Sample page started for the team odometry
+|  |
 |  | _posts
 |  |   | design             # New files added here automatically show up as blog entries
 |  |   |   | 2023-07-10-title.md
