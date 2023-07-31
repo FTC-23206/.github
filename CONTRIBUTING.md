@@ -28,7 +28,7 @@ code .
 
 ## Key Folders
 
-```PS
+```PowerShell
 |
 | docs                      # WebSite code
 |  | _data
