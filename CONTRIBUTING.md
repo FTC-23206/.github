@@ -4,8 +4,8 @@ Only `Automaducks` Team members can contribute to the repository!
 
 ## Background
 
-The team website code resides in this repository and is hosted through [Github Pages](https://pages.github.com/) as a [Jerkyll](https://jekyllrb.com/) plugin.
-You can look at [Github Pages with Jerkyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll) for more information.
+The team website code resides in this repository and is hosted through [Github Pages](https://pages.github.com/) as a [Jekyll](https://jekyllrb.com/) plugin.
+You can look at [Github Pages with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll) for more information.
 
 This mean that after the initial setup, the team can easily add or modify content using [Markdown](https://www.markdownguide.org/cheat-sheet/) markup language, which is much simpler that HTML (this page is written in Markdown).
 
@@ -63,4 +63,4 @@ See <https://jekyllrb.com/docs/posts/> for more information.
 
 ## Advanced
 
-It is much more convenient to render the website locally prior submitting a pull request when making large changes. This requires *Jerkyll* to be installed locally. See <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll> for instructions.
+It is much more convenient to render the website locally prior submitting a pull request when making large changes. This requires *Jeryll* to be installed locally. See <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll> for instructions.
