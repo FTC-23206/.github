@@ -7,7 +7,7 @@ Only `Automaducks` Team members can contribute to the repository!
 The team website code resides in this repository and is hosted through [Github Pages](https://pages.github.com/) as a [Jekyll](https://jekyllrb.com/) plugin.
 You can look at [Github Pages with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll) for more information.
 
-This mean that after the initial setup, the team can easily add or modify content using [Markdown](https://www.markdownguide.org/cheat-sheet/) markup language, which is much simpler that HTML (this page is written in Markdown).
+This means that after the initial setup, the team can easily add or modify content using [Markdown](https://www.markdownguide.org/cheat-sheet/) markup language, which is much simpler that HTML (this page is written in Markdown).
 
 Try using markdown online: [Stack Edit](https://stackedit.io/app#)
 
