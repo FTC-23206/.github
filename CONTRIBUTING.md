@@ -1,4 +1,4 @@
-# Contributing to this repository
+# Contributing to the Web Site
 
 Only `Automaducks` Team members can contribute to the repository!
 
