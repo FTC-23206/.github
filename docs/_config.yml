@@ -25,7 +25,7 @@ author: Automaducks
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: ''
+url: 'https://www.automaducks.com'
 baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
@@ -112,7 +112,7 @@ defaults:
       show_meta: false 	# Hide metadata for all pages
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: phlow     # Default author for pages
+      author: automaducks     # Default author for pages
   -
     scope:
       path: ''
@@ -121,7 +121,7 @@ defaults:
       show_meta: true   # Show metadata for all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: phlow     # Default author for posts
+      author: automaducks     # Default author for posts
 
 
 
@@ -177,9 +177,9 @@ msapplication_tilecolor              : '#fabb00'
 #    / __/ / /_/ / /__/  __/ /_/ / /_/ / /_/ / ,<
 #   /_/    \__,_/\___/\___/_.___/\____/\____/_/|_|      Facebook-Optimization › http://j.mp/fb_optimize
 
-og_image                             : 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
-og_locale                            : 'en_EN'
-og_type                              : 'website'
+# og_image                             : 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+# og_locale                            : 'en_EN'
+# og_type                              : 'website'
 
 
 #      _____            _       __   __  ___         ___
@@ -229,7 +229,7 @@ sass:
 #
 # used in _includes/footer_scripts
 
-# google_analytics_tracking_id:
+google_analytics_tracking_id: G-KYNFY6ZF6J
 
 
 
