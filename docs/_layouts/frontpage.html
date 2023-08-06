@@ -9,6 +9,9 @@ format: frontpage
     </div><!-- /.row -->
 </div><!-- /#header-home -->
 
+<div class="row">
+    {{ content }}
+</div><!-- /.row -->
 
 {% comment %}
 *
@@ -27,10 +30,6 @@ format: frontpage
 	{% if page.widget3.image or page.widget3.video or page.widget3.title %}
 		{% include _frontpage-widget.html widget=page.widget3 %}
 	{% endif %}
-</div><!-- /.row -->
-
-<div class="row">
-    {{ content }}
 </div><!-- /.row -->
 
 {% comment %}
