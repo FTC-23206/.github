@@ -1,12 +1,12 @@
 ---
-layout              : page
-show_meta           : false
-title               : "Odometry"
-subheadline         : "Odometry Module"
-header:
-  title: Automaducks
-  image_fullwidth: "header_odometry.png"
 permalink           : "/odometry/"
+layout              : page
+title               : "Odometry"
+meta_title          : "Automaducks - Odometry"
+subheadline         : "Odometry Module"
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_odometry.png"
 ---
 ## Background
 
