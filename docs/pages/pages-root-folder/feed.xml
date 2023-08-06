@@ -1,7 +1,10 @@
 ---
-layout: null
-title: "RSS Feed"
-permalink: /feed.xml
+permalink			: /feed.xml
+layout				: page
+title				: "Automaducks - RSS Feed"
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="{{ site.url }}{{ site.baseurl }}/assets/xslt/rss.xslt" ?>

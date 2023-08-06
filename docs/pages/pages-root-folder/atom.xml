@@ -1,7 +1,10 @@
 ---
-layout: null
-title: "Atom Feed"
-permalink: /atom.xml
+permalink			: /atom.xml
+layout				: page
+title				: "Automaducks - Atom Feed"
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="{{ site.baseurl }}/assets/xslt/atom.xslt" ?>
