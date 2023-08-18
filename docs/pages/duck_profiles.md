@@ -68,3 +68,19 @@ header              :
 **Favorite Food**: Pina coladas (two umbrellas)
 
 **Current Worry**: He gained weight
+
+---
+
+## Frederick
+
+<img src="../images//ducks/frederick.jpg" alt="Portrait" width="300" />
+
+**Name**: Frederick
+
+**Birthday**: February 29
+
+**Favorite Food**: Barbecue Shrimp
+
+**Current Worry**: Wildfires and deforestation
+
+---
