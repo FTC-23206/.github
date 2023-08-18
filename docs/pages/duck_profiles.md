@@ -13,12 +13,13 @@ header              :
 
 ## Bio
 
-|                   |                           |
-|-------------------|---------------------------|
-| **Name**          | Marinara                  |
-| **Birthday**      | February 3                |
-| **Favorite Food** | Marinara Sauce            |
-| **Current Worry** | The world tomato shortage |
+**Name**: Marinara
+
+**Birthday**: February 3
+
+**Favorite Food**: Marinara Sauce
+
+**Current Worry**: The world tomato shortage
 
 ---
 
@@ -28,12 +29,13 @@ header              :
 
 ## Bio
 
-|                   |                               |
-|-------------------|-------------------------------|
-| **Name**          | Han Solo                      |
-| **Birthday**      | January 31                    |
-| **Favorite Food** | Wookie Cookies                |
-| **Current Worry** | He can't find his hat (again) |
+**Name**: Han Solo
+
+**Birthday**: January 31
+
+**Favorite Food**: Wookie Cookies
+
+**Current Worry**: He can't find his hat (again)
 
 ---
 
@@ -43,12 +45,13 @@ header              :
 
 ## Bio
 
-|                   |             |
-|-------------------|-------------|
-| **Name**          | Gamora      |
-| **Birthday**      | May 2       |
-| **Favorite Food** | Hot Cheetos |
-| **Current Worry** | Inflation   |
+**Name**: Gamora
+
+**Birthday**: May 2
+
+**Favorite Food**: Hot Cheetos
+
+**Current Worry**: Inflation
 
 ---
 
@@ -58,9 +61,10 @@ header              :
 
 ## Bio
 
-|                   |                              |
-|-------------------|------------------------------|
-| **Name**          | Uncle                        |
-| **Birthday**      | September 18th               |
-| **Favorite Food** | Pina coladas (two umbrellas) |
-| **Current Worry** | He gained weight             |
+**Name**: Uncle
+
+**Birthday**: September 18th
+
+**Favorite Food**: Pina coladas (two umbrellas)
+
+**Current Worry**: He gained weight
