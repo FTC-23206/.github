@@ -12,6 +12,7 @@ header              :
 <img src="../images/ducks/marinara.jpg" alt="Portrait" width="300"/>
 
 ## Bio
+
 |                   |                           |
 |-------------------|---------------------------|
 | **Name**          | Marinara                  |
@@ -41,6 +42,7 @@ header              :
 <img src="../images/ducks/gamora.jpg" alt="Portrait" width="300"/>
 
 ## Bio
+
 |                   |             |
 |-------------------|-------------|
 | **Name**          | Gamora      |
