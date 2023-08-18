@@ -1,11 +1,11 @@
 ---
-permalink           | "/ducks/"
-layout              | page
-title               | "Meet the Ducks"
-meta_title          | "Automaducks - Duck Profiles"
+permalink           : "/ducks/"
+layout              : page
+title               : "Meet the Ducks"
+meta_title          : "Automaducks - Duck Profiles"
 header              :
-  title             | Automaducks
-  image_fullwidth   | "header_ducks.png"
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 ---
 ## Marinara
 
