@@ -84,3 +84,16 @@ header              :
 **Current Worry**: Wildfires and deforestation
 
 ---
+## Drax
+
+<img src="../images//ducks/drax.jpg" alt="Portrait" width="300" />
+
+**Name**: Drax
+
+**Birthday**: March 27
+
+**Favorite Food**: Salted peanuts
+
+**Current Worry**: Gamora told him that too much sodium will send him into cardiac arrest
+
+---
