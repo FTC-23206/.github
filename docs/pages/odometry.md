@@ -16,24 +16,25 @@ The goal is to have the whole assembly to fit inside a standard Gobilda U-Channe
 
 ## Bill of Materials
 
-| Item                           | Quantity | Link                                                 |
-|--------------------------------|----------|------------------------------------------------------|
-| REV Through Bore Encoder       | 1        | [Link to Product](https://www.revrobotics.com/rev-11-1271/)                                                                                      |
-| 38mm Omni Wheel                | 1        | [Link to Product](https://www.aliexpress.us/item/2251832788059198.html)                                                                                              |
-| M3x18mm socket head hex screw  | 1        | (Comes with the Wheel)                               |
-| M4x10mm button head hex screws | 1        |                                                      |
-| M4x35mm socket head hex screw  | 2        |                                                      |
-| GoBilda 43mm standoff          | 2        | [Link to Product][GoBilda-Standoff-43]               |
-| Neiko Spring 23/64’’ x 1-3.8’’ | 1        |                                                      |
-| M4 Nylon Nuts                  | 2        | [Link to Product](https://www.gobilda.com/2812-series-zinc-plated-steel-nylon-insert-locknut-m4-x-0-7mm-7mm-hex-25-pack/)                    |
-| Printed: Hexagonal Axel        | 1        | (Link to STL)                                        |
-| Printed: Wheel Housing         | 1        | (Link to STL)                                        |
-| Printed: Encoder Bracket       | 1        | (Link to STL)                                        |
+| Item                           | Quantity | Link                                                                                                                      |
+|--------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------|
+| REV Through Bore Encoder       | 1        | [Link to Product](https://www.revrobotics.com/rev-11-1271/)                                                               |
+| 38mm Omni Wheel                | 1        | [Link to Product](https://www.aliexpress.us/item/2251832788059198.html)                                                   |
+| M3x18mm socket head hex screw  | 1        | (Comes with the Wheel)                                                                                                    |
+| M4x10mm button head hex screws | 1        |                                                                                                                           |
+| M4x35mm socket head hex screw  | 2        |                                                                                                                           |
+| GoBilda 43mm standoff          | 2        | [Link to Product][GoBilda-Standoff-43]                                                                                    |
+| Neiko Spring 23/64’’ x 1-3.8’’ | 1        |                                                                                                                           |
+| M4 Nylon Nuts                  | 2        | [Link to Product](https://www.gobilda.com/2812-series-zinc-plated-steel-nylon-insert-locknut-m4-x-0-7mm-7mm-hex-25-pack/) |
+| Printed: Hexagonal Axel        | 1        | [Link to STL](https://www.thingiverse.com/thing:6331996)                                                                  |
+| Printed: Wheel Housing         | 1        | [Link to STL](https://www.thingiverse.com/thing:6331996)                                                                  |
+| Printed: Encoder Bracket       | 1        | [Link to STL](https://www.thingiverse.com/thing:6331996)                                                                  |
 
 
 [GoBilda-Standoff-43]: https://www.gobilda.com/1501-series-m4-x-0-7mm-standoff-6mm-od-43mm-length-4-pack/
 
 ***
+<img src="../images/Odometry Tutorial Images/0.1.jpg" alt="Materials" width="300" />
 
 ## Assembly Tutorial
 
