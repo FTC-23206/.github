@@ -5,7 +5,7 @@ header              :
   title             : Automaducks
   image_fullwidth   : "header_ducks.png"
 title: "Diary of an Innovator - Introduction"
-teaser: "2023-03-01: Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks"
+teaser: "2023-10-23: Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks"
 tags:
     - FTC
     - FIRST
@@ -22,7 +22,7 @@ Learn about the FIRST LEGO League Diary of an Innovator teams here, and the FIRS
 
 This is the first set of blogs posts you’ll read from each team over our CENTERSTAGE presented by RTX season. In this second post, meet Team 23206, Automaducks from Sammamish, Washington.
 
-<img src="../../images/blog/League Meet 0.jpg" align="middle" alt="League Meet 0" width="300" />
+<img src="../../images/general/team-lm0.jpg" align="middle" alt="League Meet 0" width="300" />
 
 <br/>
 

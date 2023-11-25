@@ -8,4 +8,4 @@ header              :
   title             : Automaducks
   image_fullwidth   : "header_odometry.png"
 ---
-<img src="../../images/duckling-1.jpg" alt="Step" width="800" />
+<img src="../../images/designs-duckling-1/duckling-1.jpg" alt="Step" width="800" />
