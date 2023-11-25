@@ -12,7 +12,7 @@ header              :
 
 Robot autonomous operation can be improved with odometry from dead wheels, given that they are less susceptible from slippage during acceleration and breaking. Dead wheels require an encoder and an omni wheel to be assembled is a way that they can be added to the robot chassis.
 
-The goal is to have the whole assembly to fit inside a standard Gobilda U-Channel. The team looked into [Open Odometry](https://openodometry.weebly.com/) but the assembly required too many parts and seemed unnecessarily complicated. The team wanted something simpler, thus the conclusion was to design our own.
+The goal is to have the whole assembly to fit inside a standard Gobilda U-Channel. The team looked into [Open Odometry](https://openodometry.weebly.com/) but the assembly required too many parts. We wanted something simpler, thus the conclusion was to design our own.
 
 ## Bill of Materials
 
