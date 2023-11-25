@@ -8,5 +8,7 @@ header              :
   image_fullwidth   : "header_ducks.png"
 ---
 
-* [Duckling 1](./duckling-1/)
-* [Odometry](./odometry/)
+* [Duckling One](./duckling-one/)
+* [Odometry Module](./odometry/)
+* [Driving Station Case](./driving-station-case/)
+* [Power Play Claw](./power-play-claw/)

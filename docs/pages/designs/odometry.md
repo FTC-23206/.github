@@ -1,7 +1,7 @@
 ---
 permalink           : "/designs/odometry/"
 layout              : page
-title               : "Odometry"
+title               : "Odometry Module"
 meta_title          : "Automaducks - Odometry"
 subheadline         : "Odometry Module"
 header              :
@@ -33,7 +33,7 @@ The goal is to have the whole assembly to fit inside a standard Gobilda U-Channe
 
 [GoBilda-Standoff-43]: https://www.gobilda.com/1501-series-m4-x-0-7mm-standoff-6mm-od-43mm-length-4-pack/
 
-<img src="../../images/designs-odometry/0.1.jpg" alt="Materials" width="300" />
+<img src="../../images/designs/odometry-0.0.jpg" alt="Materials" width="300" />
 
 ***
 
@@ -45,27 +45,27 @@ Insert the small end of the hexagonal axel into the 38mm omni wheel. Then insert
 
 Assembly should look like this:
 
-<img src="../../images/designs-odometry/Photo 1.1.png" alt="Step 1" width="300" />
+<img src="../../images/designs/odometry-1.0.png" alt="Step 1" width="300" />
 
 
 ### Step 2
 
 Place the assembly from step one into the REV Bore Encoder, so the wheel is on the side without the embossed words.
 
-<img src="../../images/designs-odometry/2.1.png" alt="Step 2" width="300" />
+<img src="../../images/designs/odometry-2.0.png" alt="Step 2" width="300" />
 
 ### Step 3
 
 Now, get the Wheel Housing and the two M4x35mm screws. Insert the screws into the two holes of the wheel housing. You should insert them on the side with the embeds for the screw heads. Do not screw in all the way, go until a centimeter of the screw is visible on the opposite side of the Wheel Housing.
 
-<img src="../../images/designs-odometry/3.1.png" alt="Step 1" width="300" />
+<img src="../../images/designs/odometry-3.0.png" alt="Step 1" width="300" />
 
 ### Step 4
 
 Retrieve the assembly you made in Steps 1 and 2. Slide the two attachment arms onto the screws you inserted in Step 3. Get both M4 Nylon nuts and and screw them on gently with your fingers. Now tighten the screws completely to secure the REV encoder to the Wheel Housing (screw heads should be flush with the piece).
 
-<img src="../../images/designs-odometry/4.1.jpg" alt="Step" width="300" />
-<img src="../../images/designs-odometry/4.2.jpg" alt="Step" width="300" />
+<img src="../../images/designs/odometry-4.0.jpg" alt="Step" width="300" />
+<img src="../../images/designs/odometry-4.1.jpg" alt="Step" width="300" />
 
 ### Step 5
 
@@ -77,15 +77,13 @@ Now to assemble the Encoder Bracket, you need the specified spring and the secon
 
 Completed Bracket Assembly:
 
-<img src="../../images/designs-odometry/5.1.jpg" alt="Step" width="300" />
+<img src="../../images/designs/odometry-6.0.jpg" alt="Step" width="300" />
 
-### U-Channel Assembly
+### Step 7 (U-Channel Assembly)
 
 Once you have the two assemblies you'll be able to fit the two into a standard GoBilda u-channel.
 
-Ex:
-
-<img src="../../images/designs-odometry/6.0.jpg" alt="Step" width="300" />
+<img src="../../images/designs/odometry-7.0.jpg" alt="Step" width="300" />
 
 ## Connecting REV Encoders
 

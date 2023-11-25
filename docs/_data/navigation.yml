@@ -6,10 +6,14 @@
   url: "/designs/"
   side: left
   dropdown:
-  - title: "Duckling 1"
-    url: "/designs/duckling-1/"
-  - title: "Odometry"
+  - title: "Duckling One"
+    url: "/designs/duckling-one/"
+  - title: "Odometry Module"
     url: "/designs/odometry/"
+  - title: "Driving Station Case"
+    url: "/designs/driving-station-case/"
+  - title: "Power Play Claw"
+    url: "/designs/power-play-claw/"
 
 - title: Ducks
   url: "/ducks/"
