@@ -1,14 +1,14 @@
 ---
 layout: page
 show_meta: false
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 title: "Drive Test"
-subheadline: "Videos"
-teaser: "First drive train test"
+teaser: "2023-03-01: First drive train test"
 tags:
-    - video
+    - Robot
 categories:
-    - test
+    - Robot
 ---
-## First drive test
-
-<iframe width="970" height="526" src="https://www.youtube.com/embed/l2Dt6F7CQb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/l2Dt6F7CQb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

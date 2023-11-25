@@ -2,16 +2,22 @@
   url: "/"
   side: left
 
-- title: Odometry
-  url: "/odometry/"
+- title: Designs
+  url: "/designs/"
+  side: left
+  dropdown:
+  - title: "Duckling 1"
+    url: "/designs/duckling-1/"
+  - title: "Odometry"
+    url: "/designs/odometry/"
+
+- title: Ducks
+  url: "/ducks/"
   side: left
 
 - title: Blog
   url: "/blog/"
   side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
 
 - title: "Search"
   url: "/search/"

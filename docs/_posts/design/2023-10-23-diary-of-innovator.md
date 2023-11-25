@@ -1,15 +1,19 @@
 ---
 layout: page
 show_meta: false
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 title: "Diary of an Innovator - Introduction"
-subheadline: "Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks"
+teaser: "2023-03-01: Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks"
 tags:
-    - FTC, FIRST, Diary, Innovator
+    - FTC
+    - FIRST
+    - Diary
+    - Innovator
 categories:
     - Diary
 ---
-## Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks
-
 Original Post: [Introducing FIRST Diary of an Innovator Blog Series and Team 23206, Automaducks](https://firsttechchallenge.blogspot.com/2023/10/introducing-first-diary-of-innovator_23.html)
 
 During the 2023-2024 season, follow along as we hear from 4 FIRST® LEGO® League, 4 FIRST® Tech Challenge, and 4 FIRST® Robotics Competition teams from around the world about their season experience and the culture of innovation their team has created.  
