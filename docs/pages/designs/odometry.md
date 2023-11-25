@@ -86,3 +86,16 @@ Once you have the two assemblies you'll be able to fit the two into a standard G
 Ex:
 
 <img src="../../images/designs-odometry/6.0.jpg" alt="Step" width="300" />
+
+## Connecting REV Encoders
+
+From the [FTC Tech Tips](https://ftc-docs.firstinspires.org/en/latest/tech_tips/tech-tips.html):
+
+> Encoder ports 0 and 3 are hardware-counted, but ports 1 and 2 are software-counted. This means higher counts-per-revolution encoders (like the REV Through-Bore Encoder) should be placed on Ports 0 or 3 to ensure counts aren’t missed, and lower counts-per-revolution encoders (like the goBILDA Odometry Pods or most motors) can be connected to any port.
+
+## Additional Resources
+
+* [GM0 Odometry](https://gm0.org/en/latest/docs/software/concepts/odometry.html)
+* [Road Runner Paper](https://github.com/acmerobotics/road-runner/blob/master/doc/pdf/Mobile_Robot_Kinematics_for_FTC.pdf)
+* [GoBilda Odometry Module](https://www.gobilda.com/odometry-pod-43mm-width-48mm-wheel/)
+
