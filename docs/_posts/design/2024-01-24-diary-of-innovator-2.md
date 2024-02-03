@@ -1,15 +1,16 @@
 ---
 layout: page
 show_meta: false
+header              :
+  title             : Automaducks
+  image_fullwidth   : "header_ducks.png"
 title: "Diary of an Innovator - Progress and Event Experience"
-subheadline: "Diary of an Innovator Team 23206 Shares Season Progress and Event Experience"
+teaser: "2024-01-24: Diary of an Innovator Team 23206 Shares Season Progress and Event Experience"
 tags:
     - FTC, FIRST, Diary, Innovator
 categories:
     - Diary
 ---
-## Diary of an Innovator Team 23206 Shares Season Progress and Event Experience
-
 Original Post: [Diary of an Innovator Team 23206 Shares Season Progress and Event Experience](https://firsttechchallenge.blogspot.com/2024/01/diary-of-innovator-team-23206-shares.html)
 
 ### How has your team’s season been going so far? 
