@@ -27,7 +27,7 @@ We also had a lot of growth on how we work together. At the beginning of the sea
 
 The best part of participating in FIRST Tech Challenge has to be attending competitions. Although stressful, competitions are what we enjoy the most. When we are competing, things can go wrong very easily. From learning about a lack of structural integrity in our claw, to having to replace and crimp broken wires just before our playoff matches, competitions always present something different for us. But beyond that, seeing our hard work come together is as rewarding as anything.
 
-## Reflecting on the season, what is the one lesson you’ll carry with you going forward?
+### Reflecting on the season, what is the one lesson you’ll carry with you going forward?
 
 A lesson we’ll take with us through the rest of our time in FIRST is the commitment we have to have throughout the season. Before competitions, we would meet almost every day of the week in preparation. And we learned that the more hours we put in, the more successful we would end up being in competitions. On one occasion we had over three hours of drive practice prior to the State Championship, it paid off in totality, as we won all of our matches leading up to the playoffs. We intend to continue putting in the time and effort next year.
 
