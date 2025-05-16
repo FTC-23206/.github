@@ -64,6 +64,59 @@ plugins:
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# Site Settings
+locale                   : "en-US"
+title                    : "Automaducks"
+title_separator          : "-"
+subtitle                 : "FTC 23206"
+name                     : &name "Automaducks" # &name is a YAML anchor which can be *referenced later
+description              : &description "Site description"
+url                      : https://www.automaducks.com
+baseurl                  : "/"
+repository               : ""
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true
+words_per_minute         : 200
+enable_copy_code_button  : false
+
+# Site Author
+author:
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  #avatar           : "/assets/images/michael-rose.jpg"
+  #bio              : "Just another *boring*, *tattooed*, *time traveling*, *designer*."
+  #location         : "Buffalo, NY"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/FTC-23206"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/automaducks/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@automaducks"
+    - label: "Thingiverse"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.thingiverse.com/ftc23206/designs"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/FTC-23206"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/automaducks/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@automaducks"
+    - label: "Thingiverse"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.thingiverse.com/ftc23206/designs"
+
 # Collections
 collections:
   pond:
