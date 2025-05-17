@@ -139,7 +139,7 @@ defaults:
 
 # Analytics
 analytics:
-provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
-google:
-  tracking_id          : G-KYNFY6ZF6J
-  anonymize_ip         : false
+  provider        : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id   : G-KYNFY6ZF6J
+    anonymize_ip  : false
