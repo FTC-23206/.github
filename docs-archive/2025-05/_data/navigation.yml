@@ -1,0 +1,32 @@
+- title: Home
+  url: "/"
+  side: left
+
+- title: Designs
+  url: "/designs/"
+  side: left
+  dropdown:
+  - title: "Duckling One"
+    url: "/designs/duckling-one/"
+  - title: "Odometry Module"
+    url: "/designs/odometry/"
+  - title: "Driving Station Case"
+    url: "/designs/driving-station-case/"
+  - title: "Power Play Claw"
+    url: "/designs/power-play-claw/"
+
+- title: Ducks
+  url: "/ducks/"
+  side: left
+
+- title: Blog
+  url: "/blog/"
+  side: left
+
+- title: "Search"
+  url: "/search/"
+  side: right
+
+- title: "Contact"
+  url: "/contact/"
+  side: right

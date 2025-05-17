@@ -1,6 +1,5 @@
 ---
 title: "Drive Test"
-teaser: "2023-03-01: First drive train test"
 tags: [Robot]
 categories: [Robot]
 ---

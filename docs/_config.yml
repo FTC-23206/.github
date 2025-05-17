@@ -72,10 +72,10 @@ subtitle                 : "FTC 23206"
 name                     : &name "Automaducks" # &name is a YAML anchor which can be *referenced later
 description              : &description "Site description"
 url                      : https://www.automaducks.com
-baseurl                  : "/"
+baseurl                  : ""
 repository               : ""
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : ""
+logo                     : /assets/images/favicon-56x56.png
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
@@ -122,6 +122,9 @@ collections:
   pond:
     output: true
     permalink: /:collection/:path/
+  designs:
+    output: true
+    permalink: /:collection/:path/
 
 # Reading Files
 include:
@@ -136,6 +139,14 @@ defaults:
       type: pages
     values:
       layout: single
+      author_profile: true
+  # _designs
+  - scope:
+      path: ""
+      type: designs
+    values:
+      layout: single
+      share: true
       author_profile: true
   # _pond
   - scope:
@@ -161,3 +172,10 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# Analytics
+analytics:
+provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+google:
+  tracking_id          : G-KYNFY6ZF6J
+  anonymize_ip         : false

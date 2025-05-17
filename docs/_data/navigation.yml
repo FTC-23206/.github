@@ -2,6 +2,8 @@
 main:
   - title: "Pond Library"
     url: /pond/getting-started/
+  - title: "Designs"
+    url: /Designs/
   - title: "Blog"
     url: /posts-year/
   - title: "About"
