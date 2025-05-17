@@ -35,8 +35,8 @@ title_separator          : "-"
 subtitle                 : "FTC 23206"
 name                     : &name "Automaducks" # &name is a YAML anchor which can be *referenced later
 description              : &description "Site description"
-url                      : https://ftc-23206.github.io/
-baseurl                  : ".github/"
+url                      : https://www.automaducks.com/
+baseurl                  : ""
 repository               : ""
 teaser                   : ""
 logo                     : /assets/images/favicon-56x56.png
