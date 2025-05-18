@@ -93,6 +93,7 @@ collections:
 # Reading Files
 include:
   - _pages
+  - javadocs
   - images
 
 # Defaults
