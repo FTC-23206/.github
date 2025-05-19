@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Pond Library"
-    url: /pond/getting-started/
+    url: /pond/welcome/
   - title: "Designs"
     url: /designs/
   - title: "Blog"
@@ -14,5 +14,17 @@ main:
 pond:
   - title: "Pond Library"
     children:
+      - title: "Welcome"
+        url: /pond/welcome/
       - title: "Getting Started"
         url: /pond/getting-started/
+      - title: "Integration"
+        url: /pond/integration/
+  - title: "Features"
+    children:
+      - title: "Overview"
+        url: /pond/features-overview/
+  - title: "API"
+    children:
+      - title: "API Documentation"
+        url: /pond/api-docs/
