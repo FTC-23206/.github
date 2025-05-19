@@ -27,6 +27,11 @@ minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon
 
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
+
+whitelist:
+  - jekyll-include-cache
+  - jekyll-feed
 
 # Site Settings
 locale                   : "en-US"
@@ -44,6 +49,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : false
+
+atom_feed:
+  path                   : # blank (default) uses feed.xml
 
 # Site Author
 author:
