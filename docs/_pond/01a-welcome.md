@@ -17,7 +17,7 @@ Pond is a stand alone library which does not have any additional dependency othe
 
 > **Note:** Pond is a stand alone library that does not require you to use any other additional FTC library, unless you choose to do so!
 
-But that doesn't mean Pod doesn't work well with other libraries, in fact it is built with the aim to take full advantage of common FTC Libraries:
+But that doesn't mean Pond doesn't work well with other libraries, in fact it is built with the aim to take full advantage of common FTC Libraries:
 
 * [Road Runner](https://rr.brott.dev/){:target="_blank" rel="noopener"}
 * [FTC Dashboard](https://acmerobotics.github.io/ftc-dashboard/){:target="_blank" rel="noopener"}
