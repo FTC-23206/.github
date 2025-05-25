@@ -24,6 +24,8 @@ pond:
     children:
       - title: "Overview"
         url: /pond/features-overview/
+      - title: "Commands"
+        url: /pond/features-commands/
   - title: "API"
     children:
       - title: "API Documentation"
