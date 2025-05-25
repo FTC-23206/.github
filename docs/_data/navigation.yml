@@ -26,6 +26,10 @@ pond:
         url: /pond/features-overview/
       - title: "Commands"
         url: /pond/features-commands/
+      - title: "Kinematics"
+        url: /pond/features-kinematics/
+      -title: "Subsystems"
+        url: /pond/features-subsystems/
   - title: "API"
     children:
       - title: "API Documentation"
