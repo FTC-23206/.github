@@ -127,6 +127,7 @@ defaults:
       type: pond
     values:
       layout: single
+      classes: wide             # Remove this for a sticky TOC
       read_time: false
       author_profile: false
       share: false
