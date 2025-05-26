@@ -1,5 +1,5 @@
 ---
-permalink: /designs/
+permalink: /designs
 title: Designs
 layout: collection
 collection: designs

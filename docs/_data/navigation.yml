@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Pond Library"
-    url: /pond/welcome/
+    url: /pond/welcome
   - title: "Designs"
-    url: /designs/
+    url: /designs
   - title: "Blog"
-    url: /posts-year/
+    url: /posts-year
   - title: "About"
-    url: /about/
+    url: /about
     
 
 # documentation links
@@ -15,22 +15,22 @@ pond:
   - title: "Pond Library"
     children:
       - title: "Welcome"
-        url: /pond/welcome/
+        url: /pond/welcome
       - title: "Getting Started"
-        url: /pond/getting-started/
+        url: /pond/getting-started
       - title: "Integration"
-        url: /pond/integration/
+        url: /pond/integration
   - title: "Features"
     children:
       - title: "Overview"
-        url: /pond/features-overview/
+        url: /pond/features-overview
       - title: "Commands"
-        url: /pond/features-commands/
+        url: /pond/features-commands
       - title: "Kinematics"
-        url: /pond/features-kinematics/
+        url: /pond/features-kinematics
       - title: "Subsystems"
-        url: /pond/features-subsystems/
+        url: /pond/features-subsystems
   - title: "API"
     children:
       - title: "API Documentation"
-        url: /pond/api-docs/
+        url: /pond/api-docs

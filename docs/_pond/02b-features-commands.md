@@ -1,6 +1,6 @@
 ---
 title: "Commands"
-permalink: /pond/features-commands/
+permalink: /pond/features-commands
 toc: true
 ---
 

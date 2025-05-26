@@ -1,6 +1,6 @@
 ---
 title: "Welcome to the Pond!"
-permalink: /pond/welcome/
+permalink: /pond/welcome
 toc: true
 ---
 ## What is Pond
@@ -9,42 +9,60 @@ Pond is a Java library made for FTC Teams of all levels. Much of the code is ins
 
 Here are the main benefits of the library:
 
-1. Promotes performant robot code through non-blocking *event driven programming*.
-2. Promotes clean code organization through the use of *subsystems* for different robot modules.
-3. It does not depend on the FTC SDK, thus allowing teams to have full control on FTC SDK version upgrade.
-4. It is built to work seamlessly with other popular libraries such as [Road Runner]{:target="_blank" rel="noopener"}, [FTC Dashboard]{:target="_blank" rel="noopener"}, etc. without having any dependency on such libraries.
+1. Performant programming through non-blocking *event driven* commands
+2. Modular hardware control through *subsystems*
+3. Works seamlessly with other popular libraries such as [Road Runner]{:target="_blank" rel="noopener"}, [FTC Dashboard]{:target="_blank" rel="noopener"} without depending on them.
+4. It does not depend on the FTC SDK, thus allowing teams to have full control on FTC SDK version upgrade.
 
-Teams can benefit from the library as follows:
+> **Beginner** teams can write advanced robot code by following the examples and using out-of-the-box library functionality while **veteran** teams can extend library functionality and also decide with specific features to use, based on the team needs.
+{: .notice--info}
 
-* Beginner teams can write advanced robot code by following the examples and using out-of-the-box library functionality
-* Veteran teams can extend library functionality and also decide with specific features to use, based on the team needs.
+Continue reading below for an overview of the main benefits.
 
-## In More Detail
+## Subsystems
 
-### Event-Driven Programming
+The use of **subsystems** promote modular, easy to maintain, robot code through the following:
 
-* The robot reacts only when something is changed, saving processing time and making it more responsive.
-* It becomes easier to describe what the robot should do *when* something happens.
-* The code will match driver and robot interactions naturally since it works well with individual events that perform specific tasks and that happen at a specific point in time.
-  * Fun fact: These are called **discrete events**!
-* You can use CommandScheduler to run only the needed commands at the right time when reacting to events (eg, pressing a button).
+* Each class has a clear job since the logic is organized by function.
+* Subsystems make sure that a piece of hardware is only controlled by one command at a time.
+* Having subsystems creates a modular approach that makes commands more reusable and testable.
+
+Example:
+
+```java
+// Initalizes the robot subsystems
+@Override
+protected void onInit() {
+
+    HardwareMapAccessor hardwareMapAccessor = new HardwareMapAccessor(hardwareMap);
+
+    robotSubsystems.addIfNotNull(new ArmController(hardwareMapAccessor, logger));
+    robotSubsystems.addIfNotNull(new MecanumDrive(hardwareMapAccessor, logger));
+    robotSubsystems.addIfNotNull(new DeadWheelsLocalizer(hardwareMapAccessor, logger));
+}
+```
+
+## Event-Driven Programming
+
+FTC robots must be periodically evaluating their state - reading sensors, motor encoders, calculating odometry - but it is not trivial to program robot operations while ensuring that all components of the robot continue operating without delay. Event driven programming enables simple and efficient programming in a very simple an concise manner.
+
+* Robot periodically process all its subsystems automatically
+* Robot periodically monitors for the trigger conditions and runs the commands when required
+
+The library also provides conditional helpers which makes it easy to check changes in state of buttons and sensors.
+
+> **Competitiveness**: This structure supports intelligent, competitive robot behavior—whether you're following a trajectory or reacting to game elements.
+{: .notice--info}
 
 Example:
 
 ```java
 // Moves the arm only when the button A was just pressed
-commandScheduler.runPeriodically(d -> d
-    .when(c -> c.buttonWasJustPressed(() -> gamepad1.a))
+commandScheduler.runPeriodically(command -> command
+    .when(condition -> condition.buttonWasJustPressed(() -> gamepad1.a))
     .execute(() -> armController.moveToAngle(Math.toRadians(90.0), 0.8))
     .build("RaiseArm"));
 ```
-
-### Subsystems
-
-* The library is built for subsystems; a **subsystem** is what handles the logic and state of a physical part of the robot.
-  * Each class has a clear job since the logic is organized by function.
-  * Subsystems make sure that a piece of hardware is only controlled by one command at a time.
-  * Having subsystems creates a modular approach that makes commands more reusable and testable.
 
 [WPILib]: <https://frcdocs.wpi.edu/en/2020/docs/software/wpilib-overview/index.html>
 [FTCLib]: <https://ftclib.org/>

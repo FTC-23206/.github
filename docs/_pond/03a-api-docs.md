@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "API Documentation"
-permalink: /pond/api-docs/
+permalink: /pond/api-docs
 toc: false
 classes: wide
 ---
