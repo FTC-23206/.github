@@ -70,8 +70,11 @@ author:
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/@automaducks"
     - label: "Thingiverse"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-fw fa-cube"
       url: "https://www.thingiverse.com/ftc23206/designs"
+    - label: "Donate - 501(c)(3)"
+      icon: "fas fa-fw fa-circle-dollar-to-slot"
+      url: "https://secure.givelively.org/donate/washington-first-robotics/automaducks-23206"
 
 # Site Footer
 footer:
