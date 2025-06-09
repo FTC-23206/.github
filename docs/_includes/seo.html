@@ -2,7 +2,26 @@
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
 
 <!-- Mermaid Diagrams Support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
-    mermaid.initialize({startOnLoad:true});
+    mermaid.initialize({
+        startOnLoad:true,
+        theme:'base',
+        themeVariables: {
+            fontFamily: 'Fira Code, monospace',
+            fontSize: '20px',
+
+            primaryTextColor: '#ffffff',
+            secondaryTextColor: '#11999e',
+            tertiaryTextColor: '#11999e',
+            noteTextColor: '#11999e',
+            textColor: '#11999e',
+
+            primaryColor: '#11999e',
+            secondaryColor: '#cee4ea',
+            tertiaryColor: '#cee4ea',
+
+            background: '#cee4ea',
+        }
+    });
 </script>
