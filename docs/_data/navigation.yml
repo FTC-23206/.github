@@ -18,6 +18,8 @@ pond:
         url: /pond/welcome
       - title: "Getting Started"
         url: /pond/getting-started
+      - title: "Conventions"
+        url: /pond/conventions
       - title: "Integration"
         url: /pond/integration
   - title: "Features"
