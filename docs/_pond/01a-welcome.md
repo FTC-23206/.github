@@ -1,6 +1,6 @@
 ---
 title: "Welcome to the Pond!"
-permalink: /pond/welcome
+permalink: /pond
 toc: true
 ---
 ## What is Pond
