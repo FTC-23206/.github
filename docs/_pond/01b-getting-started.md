@@ -57,8 +57,6 @@ There are 2 available installation methods:
 
 ## Option 2: In-Place Update
 
-### Clone The Repository
-
 #### Add the Pond package reference (Required)
 
 1. Make sure your `TeamCode` project successfully builds in Android Studio (`F7`)
