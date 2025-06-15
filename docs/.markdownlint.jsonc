@@ -1,0 +1,9 @@
+{
+    // See below for rule definitions:
+    //
+    // https://github.com/DavidAnson/vscode-markdownlint?tab=readme-ov-file#rules
+
+    "MD013": false,     // Disable line length
+    "MD033": false,     // Disable inline html
+    "MD036": false      // Disable no-emphasis-as-heading
+}

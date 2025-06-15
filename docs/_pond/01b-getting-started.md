@@ -23,7 +23,7 @@ There are 2 available installation methods:
 
 1. Install *Android Studio* from <https://developer.android.com/studio>{:target="_blank" rel="noopener"}
 2. Open *Android Studio* and choose 'Clone Repository'
-    <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" />
+    <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" alt="" />
 3. Give the repository URL:
    `https://github.com/FTC-23206/automaducks-pond-starter.git`
 
@@ -32,9 +32,11 @@ There are 2 available installation methods:
 1. Install *git* from <https://git-scm.com/downloads>{:target="_blank" rel="noopener"}
 2. Open `Command Prompt` or `Terminal` and navigate to the desired repository location
 3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository:
+
     ```powershell
     git clone https://github.com/FTC-23206/automaducks-pond-starter.git
     ```
+
 4. Open the the root of the repository with *Android Studio*
 
 ### Change the configuration to match your robot configuration
@@ -47,7 +49,6 @@ There are 2 available installation methods:
 2. Once you have the correct configuration, update the code to match your temporary configuration
 
 > **Motors  Configuration Troubleshooting**
-> 
 > (Pending)
 {: .notice--warning}
 
@@ -57,11 +58,12 @@ There are 2 available installation methods:
 
 ## Option 2: In-Place Update
 
-#### Add the Pond package reference (Required)
+### Add the Pond package reference (Required)
 
 1. Make sure your `TeamCode` project successfully builds in Android Studio (`F7`)
 2. Add the following to your Team Code gradle file
     File: `(RepositoryRoot)\TeamCode\build.gradle`
+
     ```gradle
     dependencies {
         implementation project(':FtcRobotController')
@@ -70,6 +72,7 @@ There are 2 available installation methods:
         implementation 'com.automaducks:pond:0.9.0'
     }
     ```
+
 3. Sync the project with gradle files (`CTRL+SHIFT+O`)
 4. Rebuild `TemCode` project (`F7`)
 
@@ -80,6 +83,7 @@ After a successful build, you are ready to start leveraging the *Pond* libraries
 This is not require but Pond is made to work well with FTC dashboard as it can leverage dynamic configuration changes and graphing.
 
 1. Similar to the above, update your Team Code `build.gradle` per below:
+
     ```gradle
     //
     // build.gradle in TeamCode
@@ -123,6 +127,7 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
         implementation 'com.acmerobotics.dashboard:dashboard:0.4.16'
     }
     ```
+
 2. Sync the project with gradle files (`CTRL+SHIFT+O`)
 3. Rebuild `TemCode` project (`F7`)
 
