@@ -17,19 +17,21 @@ There are 2 available installation methods:
 
 ## Option 1: Quick Start Repository
 
-### From Android Studio
+### Clone the Repository
 
-1. Install *Android Studio* from <https://developer.android.com/studio>
+**From Android Studio**
+
+1. Install *Android Studio* from <https://developer.android.com/studio>{:target="_blank" rel="noopener"}
 2. Open *Android Studio* and choose 'Clone Repository'
     <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" />
 3. Give the repository URL:
    `https://github.com/FTC-23206/automaducks-pond-starter.git`
 
-### From Command Line
+**From Command Line**
 
-1. Install *git* from <https://git-scm.com/downloads>
+1. Install *git* from <https://git-scm.com/downloads>{:target="_blank" rel="noopener"}
 2. Open `Command Prompt` or `Terminal` and navigate to the desired repository location
-3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter) repository:
+3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository:
     ```powershell
     git clone https://github.com/FTC-23206/automaducks-pond-starter.git
     ```
@@ -39,13 +41,15 @@ There are 2 available installation methods:
 
 1. Use FTC Dashboard to try the correct configuration
    1. Connect your computer to your robot wifi
-   2. Open <http://192.168.43.1:8080/dash> on web browser
+   2. Open <http://192.168.43.1:8080/dash>{:target="_blank" rel="noopener"} on web browser
    3. Configure `Chassis` motors to match your robot hub configuration
-2. Run The robot (see section below for configuration)
+   4. Run the robot drive operation and verify it runs correctly (see section below for configuration troubleshooting)
+2. Once you have the correct configuration, update the code to match your temporary configuration
 
-### Motors  Configuration Troubleshooting
-
-(Pending)
+> **Motors  Configuration Troubleshooting**
+> 
+> (Pending)
+{: .notice--warning}
 
 ### Sample Code Walkthrough
 
@@ -128,4 +132,4 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
 
 1. See how to best leverage Pond features from the [documentation](/pond).
 2. You can also find sample code here:
-    <https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode>
+    <https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode>{:target="_blank" rel="noopener"}
