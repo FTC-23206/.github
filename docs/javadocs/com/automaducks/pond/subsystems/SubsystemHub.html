@@ -199,15 +199,15 @@ extends <a href=SubsystemBase.html>SubsystemBase</a> implements <a href=ISubsyst
                                         <tr id="i0" class="altColor">
                                             <td class="colFirst"><code>void</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=SubsystemHub.html#addIfNotNull(ISubsystem)>addIfNotNull</a>(<a href=ISubsystem.html>ISubsystem</a> subsystem) </code>
+                                            <th class="colSecond" scope="row"><code><a href=SubsystemHub.html#add(ISubsystem)>add</a>(<a href=ISubsystem.html>ISubsystem</a> subsystem) </code>
                                             </th>
                                             <td class="colLast">Add a new subsystem to the hub.</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code>&lt;T&gt; <a href=../commands/CommandBuilder.html>T</a></code>
+                                            <td class="colFirst"><code>&lt;T extends <a href=ISubsystem.html>ISubsystem</a>&gt; <a href=https://developer.android.com/reference/kotlin/java/lang/Comparable.html>T</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=SubsystemHub.html#findFirst(Class)>findFirst</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../commands/CommandBuilder.html>T</a>&gt; subsystemClass) </code>
+                                            <th class="colSecond" scope="row"><code><a href=SubsystemHub.html#findFirst(Class)>findFirst</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Comparable.html>T</a>&gt; subsystemClass) </code>
                                             </th>
                                             <td class="colLast">Find the first available subsystem by its class.</td>
                                         </tr>
@@ -291,15 +291,15 @@ extends <a href=SubsystemBase.html>SubsystemBase</a> implements <a href=ISubsyst
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="addIfNotNull(ISubsystem)">
+                                <a id="add(ISubsystem)">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>addIfNotNull</h4>
-                                        <pre class="methodSignature"> void <a href=SubsystemHub.html#addIfNotNull(ISubsystem)>addIfNotNull</a>(<a href=ISubsystem.html>ISubsystem</a> subsystem)</pre>
+                                        <h4>add</h4>
+                                        <pre class="methodSignature"> void <a href=SubsystemHub.html#add(ISubsystem)>add</a>(<a href=ISubsystem.html>ISubsystem</a> subsystem)</pre>
                                         <div class="block"><p>Add a new subsystem to the hub.</p></div>
                                         
                                         <dl>
@@ -323,7 +323,7 @@ extends <a href=SubsystemBase.html>SubsystemBase</a> implements <a href=ISubsyst
                                           >
                                     <li class="blockList">
                                         <h4>findFirst</h4>
-                                        <pre class="methodSignature"> &lt;T&gt; <a href=../commands/CommandBuilder.html>T</a> <a href=SubsystemHub.html#findFirst(Class)>findFirst</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../commands/CommandBuilder.html>T</a>&gt; subsystemClass)</pre>
+                                        <pre class="methodSignature"> &lt;T extends <a href=ISubsystem.html>ISubsystem</a>&gt; <a href=https://developer.android.com/reference/kotlin/java/lang/Comparable.html>T</a> <a href=SubsystemHub.html#findFirst(Class)>findFirst</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Comparable.html>T</a>&gt; subsystemClass)</pre>
                                         <div class="block"><p>Find the first available subsystem by its class.</p></div>
                                         
                                         <dl>

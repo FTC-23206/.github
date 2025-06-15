@@ -1,8 +1,6 @@
 $dokka.format:javadoc-v1
 $dokka.linkExtension:html
-$dokka.location:com.automaducks.pond.commands/DynamicCommand.DynamicCommandBuilder///PointingToDeclaration/com/automaducks/pond/commands/DynamicCommand.DynamicCommandBuilder.html
-$dokka.location:com.automaducks.pond.commands/ParallelCommand.ParallelCommandBuilder///PointingToDeclaration/com/automaducks/pond/commands/ParallelCommand.ParallelCommandBuilder.html
-$dokka.location:com.automaducks.pond.commands/SequentialCommand.SequentialCommandBuilder///PointingToDeclaration/com/automaducks/pond/commands/SequentialCommand.SequentialCommandBuilder.html
+$dokka.location:com.automaducks.pond.commands/Command.State///PointingToDeclaration/com/automaducks/pond/commands/Command.State.html
 $dokka.location:com.automaducks.pond.kinematics/MotorParams.Mode///PointingToDeclaration/com/automaducks/pond/kinematics/MotorParams.Mode.html
 $dokka.location:com.automaducks.pond.kinematics/MotorParams.ZeroPowerBehavior///PointingToDeclaration/com/automaducks/pond/kinematics/MotorParams.ZeroPowerBehavior.html
 com.automaducks.pond.commands
