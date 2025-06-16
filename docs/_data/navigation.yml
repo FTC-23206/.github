@@ -34,6 +34,12 @@ pond:
         url: /pond/features-kinematics
       - title: "Subsystems"
         url: /pond/features-subsystems
+  - title: "Resources"
+    children:
+      - title: "Configuration and Graphing"
+        url: /pond/configuration-and-graphing
+      - title: "Path Following"
+        url: /pond/path-following
   - title: "Reference and Feedback"
     children:
       - title: "API Documentation"
