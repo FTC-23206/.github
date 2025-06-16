@@ -34,7 +34,9 @@ pond:
         url: /pond/features-kinematics
       - title: "Subsystems"
         url: /pond/features-subsystems
-  - title: "API"
+  - title: "Reference and Feedback"
     children:
       - title: "API Documentation"
         url: /pond/api-docs
+      - title: "Feedback"
+        url: /pond/feedback
