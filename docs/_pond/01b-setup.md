@@ -1,21 +1,24 @@
 ---
-title: "Getting Started"
-permalink: /pond/getting-started
+title: "Setup"
+permalink: /pond/setup
 toc: true
 ---
 
-## Installation Methods
+## Setup Options
 
-There are 2 available installation methods:
+There are 2 available setup methods:
 
-* **Quick Start Repository**: zero-code process that gets you started from a new FTC Repo which is ready to run. This is recommended for beginner to intermediate teams which are not looking into bringing their existing code *as-is* to the new repository.
+* **Quick-Start Repository**: zero-code process that gets you started from a new FTC Repo which is ready to run. This is recommended for beginner to intermediate teams which are not looking into bringing their existing code *as-is* to the new repository.
 
-* **In-Place Update**: adding Pond library reference to your existing code. This is recommended for advanced teams who wants to be selective about how to integrate and which functionality to depend on.
+* **In-Place Update**: add Pond library reference to your existing code. This is recommended for advanced teams who wants to be selective about how to integrate and which functionality to depend on.
 
-> **Tip:** The 2 installation methods allow you to reach the same result as the Pond library is always used as a library reference. The only difference is the path to get there. In other words, no matter which way you chose to start, both methods allow for the same result in the end.
+> **Tip:** The 2 setup methods allow you to reach the same result as the Pond library is always used as a library reference. The only difference is the path to get there. In other words, no matter which way you chose to start, both methods allow for the same result in the end.
 {: .notice--info}
 
-## Option 1: Quick Start Repository
+## Option 1: Quick-Start Repository
+
+> **Recommendation**: This is the recommended way to get started as it is the fastest and allows you to evaluate the library functionality with little to no effort. Moreover, in this way your can easily setup a separate repository aside from your current project, thus allowing you to evaluate it without making any changes to your current project.
+{: .notice--success}
 
 ### Clone the Repository
 
@@ -52,10 +55,6 @@ There are 2 available installation methods:
 > (Pending)
 {: .notice--warning}
 
-### Sample Code Walkthrough
-
-(Pending)
-
 ## Option 2: In-Place Update
 
 ### Add the Pond package reference (Required)
@@ -78,7 +77,7 @@ There are 2 available installation methods:
 
 After a successful build, you are ready to start leveraging the *Pond* libraries.
 
-#### Add FTC Dashboard and Road Runner (Recommended)
+### Add FTC Dashboard and Road Runner (Recommended)
 
 This is not require but Pond is made to work well with FTC dashboard as it can leverage dynamic configuration changes and graphing.
 
@@ -130,9 +129,3 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
 
 2. Sync the project with gradle files (`CTRL+SHIFT+O`)
 3. Rebuild `TemCode` project (`F7`)
-
-## Leveraging Pond
-
-1. See how to best leverage Pond features from the [documentation](/pond).
-2. You can also find sample code here:
-    <https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode>{:target="_blank" rel="noopener"}

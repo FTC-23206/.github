@@ -19,8 +19,10 @@ Here are the main benefits of the library:
 
 Continue reading below for an overview of the main benefits:
 
+* [Setup](/pond/setup) for setting up your project
 * [Features Overview](/pond/features-overview) to learn more about the library
-* [Getting Started](/pond/getting-started) for using it on your robot
+
+Also, see Pond Quick-Start [Team Code](https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode){:target="_blank" rel="noopener"} for a complete example of how working with Pond looks like.
 
 [WPILib]: <https://frcdocs.wpi.edu/en/2020/docs/software/wpilib-overview/index.html>
 [FTCLib]: <https://ftclib.org/>
