@@ -20,7 +20,7 @@ There are 2 available setup methods:
 > **Recommendation**: This is the recommended way to get started as it is the fastest and allows you to evaluate the library functionality with little to no effort. Moreover, in this way your can easily setup a separate repository aside from your current project, thus allowing you to evaluate it without making any changes to your current project.
 {: .notice--success}
 
-### Clone the Repository
+### Clone the Repository (for evaluation)
 
 **From Android Studio**
 
@@ -54,6 +54,18 @@ There are 2 available setup methods:
 > **Motors  Configuration Troubleshooting**
 > (Pending)
 {: .notice--warning}
+
+### Fork the repository (Make it your own!)
+
+Once you have decided to continue on this path you should fork the repository so you can continue developing on your own team repository:
+
+1. Sign-in to [Github](https://github.com/){:target="_blank" rel="noopener"}
+2. Open <https://github.com/FTC-23206/automaducks-pond-starter>{:target="_blank" rel="noopener"}
+3. Click on *Fork* and provide the requested information (make sure you are making the fork to your Team organization or your own account)
+
+    <img src="/images/pond/pond-github-starter-fork.png" width="600" style="display: block; margin: 0 auto;" alt="Shows github fork button" />
+
+4. Clone your own repository so you can continue to make changes to your robot project.
 
 ## Option 2: In-Place Update
 
