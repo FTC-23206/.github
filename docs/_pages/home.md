@@ -32,3 +32,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn more"      
 ---
+
+#### Check It Out
+
+* Pond Library is nearly done: [Welcome to the Pond!](https://www.automaducks.com/pond)
+* Great FTC Resources: [Game Manual 0](https://gm0.org/en/latest/), [Road Runner](https://github.com/acmerobotics/road-runner), [FTC Dashboard](https://github.com/acmerobotics/ftc-dashboard), [First FTC SDK](https://ftc-docs.firstinspires.org/en/latest/ftc_sdk/overview/index.html)
