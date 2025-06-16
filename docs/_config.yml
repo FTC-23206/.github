@@ -28,6 +28,8 @@ minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon
 plugins:
   - jekyll-include-cache
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 whitelist:
   - jekyll-include-cache
@@ -39,10 +41,10 @@ title                    : "Automaducks"
 title_separator          : "-"
 subtitle                 : "FTC 23206"
 name                     : &name "Automaducks" # &name is a YAML anchor which can be *referenced later
-description              : &description "Site description"
+description              : &description "This is the FIRST FTC 23206 team site. It has information about our journey and resources for your FIRST FTC team!"
 url                      : https://www.automaducks.com/
 baseurl                  : ""
-repository               : ""
+repository               : "https://github.com/FTC-23206/.github"
 teaser                   : ""
 logo                     : /assets/images/favicon-56x56.png
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
