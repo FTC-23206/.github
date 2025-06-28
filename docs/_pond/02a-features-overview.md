@@ -16,7 +16,7 @@ These are all of the packages available in Pond:
 | Common     | Common classes such as Pose2D, Duration, Stopwatch, etc.                        |
 | Commands   | Command execution systems and common commands                                   |
 | Control    | Systems control such as PID                                                     |
-| Kinematics | Robot kinematics suchBase as Mecanum Forward and Inverse kinematics calculators |
+| Kinematics | Robot kinematics such as Mecanum Forward and Inverse kinematics calculators |
 | Subsystems | Robot organization into subsystems                                              |
 | Utility    | Utility classes for math, logging, strings, etc.                                |
 
