@@ -3,7 +3,7 @@ title: "Commands"
 permalink: /pond/features-commands
 toc: true
 ---
-Hi, this page will tell you about the commands!
+This is how the commands are executed:
 
 {% raw %}
 <div class="mermaid">
@@ -16,3 +16,5 @@ stateDiagram-v2
     EXECUTING --> [*]: [IsCompleted = True <br> and RunOnce]
 </div>
 {% endraw %}
+
+###Available Commands' Usage
