@@ -14,7 +14,8 @@ The pond library assumes the standard [FIRST FTC field orientation](https://ftc-
 
 ## Robot Orientation
 
-(Pending)
+### Definition
+Robot-centered orientation is where the movement of the robot is based on the robot’s own perspective. For instance, if the joystick is pushed forward, the robot moves forward based on its front no matter how it's oriented.
 
 ## Units
 
