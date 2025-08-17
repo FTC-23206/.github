@@ -28,6 +28,7 @@ Simply returns the `currentPoseAndVelocity` in the form of a PoseAndVelocity.
 The classes that deal with Linear Actuation convert **pulses** to **linear distance** (in millimeters) and vice versa, given the parameters of the gear-ratio's and wheel diameters. Deals with linear motion.
 
 ### Pulses/Linear Conversion
+The `LinearActuatorCalculator` converts between measurements in **linear distance** to **pulses**, and vice versa. When converting from encoder pulses to distance, you use the `pulsesToDistance` method which receives an integer (pulses) and returns a double (linear distance), and when converting from linear distance to encoder pulses, you use the `lengthToPulses` method which receives a double (linear distance) and returns an integer (pulses).
 
 ## Angular Actuatation
 
@@ -35,3 +36,4 @@ The classes that deal with Linear Actuation convert **pulses** to **linear dista
 The classes that deal with Angular Actuation convert **pulses** to **angular rotation** (in radians) and vice versa, given the parameters of the gear-ratio's. Deals with angular motion/rotation.
 
 ### Pulse/Angle Conversion
+The `AngularActuatorCalculator` converts between encoder **pulses** to measurement in **radians**, and vice versa. When converting from encoder pulses to radians, you use the `pulsesToAngle` method which receives a integer (pulses) and returns a double (radians), and when converting from radians to encoder pulses, you use the `angleToPulses` method which receives a double (radians) and returns a double (pulses).
