@@ -14,7 +14,7 @@ The pond library assumes the standard [FIRST FTC field orientation](https://ftc-
 
 ## Robot Orientation
 
-Robot-centered orientation is where the movement of the robot is based on the robot’s own perspective. For instance, if the joystick is pushed forward, the robot moves forward based on its front no matter how it's oriented.
+Robot-centered orientation is where the movement of the robot is based on the robot’s own perspective. For instance, if the joystick is pushed forward, the robot moves forward based on its front, regardless of its orientation. By contrast, in field-centered orientation, the robot moves forward to the top of the field, no matter how it's oriented.
 The pond library uses robot-centered orientation. Because of this, be sure to account for that change when driving the robot.
 
 <img src="/images/pond/robot-centered-orientation-diagram.png" style="display: block; margin: 0 auto;" alt="Shows robot-centered orientation diagram." />
