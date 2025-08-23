@@ -4,12 +4,16 @@ permalink: /pond/features-subsystems
 toc: true
 ---
 
-## Interfaces
+## Controllers
 ### Holonomic Controller
-`IHolonomicControl` : extends `ISubsystem` but provides a method to calculate the desired actuation of a holonomic drivetrain.
+`IHolonomicController` : extends `ISubsystem` but provides a method to calculate the desired actuation of a holonomic drivetrain.
+
+`HolonomicController` : implements `IHolonomicController` and completes the calculations for actuation. Initializes the controller with params and logging utilities.
+
+`HolonomicControllerParams` : Holds the params adjustable within instsances of the Holonomic controller. These can be tuned in FTC Dashboard to your specific holonomic drivetrain.
 
 ### Drivetrain
-`IDrivetrain` : extends `IRealTimeSubsystem`but provides real-time power updates to the drivetrain.
+`IDrivetrain` : extends `IRealTimeSubsystem`but provides real-time power updates to the drivetrain using the `periodic` function.
 
 ## Subsystems
 Subsystems will extend `SubsystemBase` and implement either `ISubsystem` or `IRealTimeSubsystem`.
