@@ -1,1 +1,5 @@
-Coming soon!
+---
+title: "Glossary"
+permalink: /pond/glossary
+toc: true
+---
