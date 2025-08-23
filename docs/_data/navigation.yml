@@ -44,5 +44,8 @@ pond:
     children:
       - title: "API Documentation"
         url: /pond/api-docs
+      - title: "Glossary"
+        url: /pond/glossary
       - title: "Feedback"
         url: /pond/feedback
+
