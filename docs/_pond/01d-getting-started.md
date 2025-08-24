@@ -104,6 +104,8 @@ Any final code that you may want to run when the robot is stopped.
 
 All robots need configurations values, and most likely, lots of them! While *Pond* does not require [FTC Dashboard], it's defined in a way to make it easy for the required configuration values to be compatible with its use.
 
+If you are using [FTC Dashboard], once you deploy the code, connect your computer to the robot wifi and open <http://192.168.43.1:8080/dash> for dynamically changing the configuration without having to re-deploy your code.
+
 ```java
 public class Configuration {
 
@@ -156,7 +158,9 @@ The `Chassis` subsection holds all the configuration values for your drive train
 ## Sample Subsystems
 
 ### Mecanum Drive
+
 The constructor uses the hardware map accessor to get the motors, apply their configurations, and store their references within the class
+
 ```java
 public class MecanumDrive extends SubsystemBase implements IDrivetrain {
    
@@ -177,7 +181,9 @@ public class MecanumDrive extends SubsystemBase implements IDrivetrain {
         this.rearRight = hardwareMap.getAndConfigureMotor(Configuration.Chassis.MotorRearRight);
     }
 ```
+
 MecanumDrive contains two other methods `setPower` and `periodic`, the `setPower` method stores the new target power and logs it:
+
 ```java
  @Override
     public void setPower(Pose2D power) {
@@ -187,7 +193,9 @@ MecanumDrive contains two other methods `setPower` and `periodic`, the `setPower
         this.targetPower.copyFrom(power);
     }
 ```
+
 Once the target power is stored, the `periodic` method calculates the power for each wheel, and applies it in the robot's processing cycle:
+
 ```java
 @Override
     public void periodic() {
@@ -202,6 +210,7 @@ Once the target power is stored, the `periodic` method calculates the power for 
         logger.logDebug(getLogTag(),"Mecanum Power: %s", wheelsData);
     }
 ```
+
 This method makes use of the `MecanumInverseKinematics` class to calculate the power given to each wheel.
 
 ### Dead Wheels Localizer
