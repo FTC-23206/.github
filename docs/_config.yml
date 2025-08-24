@@ -128,16 +128,16 @@ defaults:
       author_profile: true
   # _pond
   - scope:
-      path: ""
       type: pond
     values:
       layout: single
       classes: wide             # Remove this for a sticky TOC
+      toc_sticky: true
       read_time: false
       author_profile: false
       share: false
       comments: false
-      toc_sticky: true
+      description: FIRST FTC Pond Library Documentation and Resources (for Java)
       sidebar:
         nav: "pond"
   # _posts
@@ -152,6 +152,11 @@ defaults:
       comments: # true
       share: true
       related: true
+  # javadocs
+  - scope:
+      path: javadocs
+    values:
+      sitemap: false
 
 # Analytics
 analytics:

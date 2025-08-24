@@ -1,6 +1,23 @@
 <!-- Using seo.html since custom_head was not being included -->
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
 
+<!-- SEO -->
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ page.url }}">
+<meta property="og:description" content="{{ page.description }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ site.url }}",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+}
+</script>
+
 <!-- Mermaid Diagrams Support -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
