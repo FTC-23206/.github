@@ -41,8 +41,52 @@ They are perfect for teams who want:
 
 ## Writing Your First Subsystem
 
-Coming soon!
+**Using SubsystemBase**
 
+To keep your robot code clean and consistent, all your subsystems should extend from SubsystemBase. This gives you built-in support for logging, without repeating the same setup every time.
+
+**What Is SubsystemBase?**
+
+SubsystemBase is a class your team created to make writing subsystems easier. It:
+
+- Sets up a logger for each subsystem
+
+- Automatically generates a clear log tag (like subsys/DrivetrainSubsystem)
+
+- Makes your code shorter, cleaner, and easier to debug
+
+   
 ## Writing Your First Command
 
-Coming soon!
+**How to Use It**
+
+Here’s how you extend SubsystemBase in your own subsystem:
+
+Step 1: Create a New Subsystem Class
+
+Start by creating a new Java file for your subsystem. For example:
+```
+// DrivetrainSubsystem.java
+package com.automaducks.pond.subsystems;
+
+public class DrivetrainSubsystem extends SubsystemBase {
+    // You’ll add your code here next
+}
+```
+
+This makes the class inherent everything from SubystemBase, like logging and utility functions.
+
+Step 2: 
+Inside your class, create variables. You'll need a logger to return telemetry during operation:
+
+```
+    private final ITelemetryLogger logger;
+```
+
+Hardware and control parameters, variables that store your hardware and control settings:
+
+```
+private final DcMotor leftMotor;
+private final DcMotor rightMotor;
+```
+
