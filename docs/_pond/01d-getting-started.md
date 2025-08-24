@@ -13,6 +13,8 @@ This page you guide you step-by-step through the Pond starter classes, while exp
 
 ## Sample Operation Drive
 
+> File: OperationDrive
+
 This class extends the *OperationBase* base class from the Pond integrations and defines 4 methods:
 
 | Method     | When it Executes                            | What it Does                                                                                                                       |
@@ -96,7 +98,56 @@ Any final code that you may want to run when the robot is stopped.
 
 ## Sample Configuration
 
-TBD
+> File: Configuration
+
+Any robot needs configurations values, and most likely, lots of them! While *Pond* doesn't require [FTC Dashboard], its is defined in a way that it makes it easy to have the required configuration values defined in a way that is compatible with its use.
+
+```java
+public class Configuration {
+
+    /**
+     * Chassis configurations.
+     */
+    @Config
+    public static class Chassis {
+
+        // Motors
+        public static MotorParams MotorFrontLeft    = new MotorParams("front_left", MotorParams.Mode.RUN_WITHOUT_ENCODER,false);
+        public static MotorParams MotorFrontRight   = new MotorParams("front_right", MotorParams.Mode.RUN_WITHOUT_ENCODER,true);
+        public static MotorParams MotorRearLeft     = new MotorParams("rear_left", MotorParams.Mode.RUN_WITHOUT_ENCODER,false);
+        public static MotorParams MotorRearRight    = new MotorParams("rear_right", MotorParams.Mode.RUN_WITHOUT_ENCODER,true);
+
+        // Dead wheels parameters
+        public static DeadWheelsKinematicsParams DeadWheels = new DeadWheelsKinematicsParams(
+            63,
+            196,
+            2 * Math.PI * 18.688524,
+            8192);                          // https://www.revrobotics.com/rev-11-1271/
+    }
+
+    /**
+     * Arm configuration
+     */
+    @Config
+    public static class Arm {
+
+        public static AngularActuatorParams PivotActuation = new AngularActuatorParams(
+            StandardGearRatios.GOBILDA_223_RPM,
+            5.0);
+
+        public static MotorParams MotorArm = new MotorParams("slide_pivot", MotorParams.Mode.RUN_TO_POSITION,true);
+    }
+
+    // ...
+}
+```
+
+The `Configuration` class holds all robot parameters that may need to be adjusted (either because you are a new team using the repository, or because the the team is trying out different settings). Each subsection is defined as a child `static` class. This also allows for each one of the sections to be published to [FTC Dashboard] through the `@Config` attribute
+
+> If you don't want to use FTC Dashboard, simply remove the `@Config` attributes.
+{: .notice}
+
+The `Chassis` subsection holds all the configuration values for your drive train.
 
 ## Sample Subsystems
 
@@ -202,3 +253,4 @@ private final DcMotor rightMotor;
 ```
 
 [Pond Integration]: </pond/integration> "Pond Integration"
+[FTC Dashboard]: <https://acmerobotics.github.io/ftc-dashboard/> "FTC Dashboard"
