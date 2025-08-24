@@ -100,7 +100,7 @@ Any final code that you may want to run when the robot is stopped.
 
 > File: Configuration
 
-Any robot needs configurations values, and most likely, lots of them! While *Pond* doesn't require [FTC Dashboard], its is defined in a way that it makes it easy to have the required configuration values defined in a way that is compatible with its use.
+All robots need configurations values, and most likely, lots of them! While *Pond* does not require [FTC Dashboard], it's defined in a way to make it easy for the required configuration values to be compatible with its use.
 
 ```java
 public class Configuration {
