@@ -4,12 +4,12 @@ permalink: /pond/integration
 toc: true
 ---
 
+> **Wacth Out!:** You can **skip this page if you are using the 'Quick-Start Repository' setup method** as the integration requirements are already taken care for you.
+{: .notice--warning}
+
 ## Requirements
 
 Since Pond does not take a dependency on FTC SDK types and versions, these are required steps for teams looking to leverage all the functionality in the library.
-
-> **Wacth Out!:** You can skip this page if you are using the quick-start setup method as the integration requirements are already taken care for you.
-{: .notice--info}
 
 ### Initialization
 

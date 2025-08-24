@@ -18,7 +18,7 @@ pond:
         url: /pond
       - title: "Setup"
         url: /pond/setup
-      - title: "Integration"
+      - title: ">> Integration (Advanced)"
         url: /pond/integration
       - title: "Getting Started"
         url: /pond/getting-started

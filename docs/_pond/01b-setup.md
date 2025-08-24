@@ -12,52 +12,19 @@ There are 2 available setup methods:
 
 * **In-Place Update**: add Pond library reference to your existing code. This is recommended for advanced teams who wants to be selective about how to integrate and which functionality to depend on.
 
-> **Tip:** The 2 setup methods allow you to reach the same result as the Pond library is always used as a library reference. The only difference is the path to get there. In other words, no matter which way you chose to start, both methods allow for the same result in the end.
+> **Recommendation**: The *Quick-Start Repository* is the recommended way to get started as it is the fastest option and allows you to quickly evaluate the library functionality with little to no effort. Additionally, setting up a new repository allows you to evaluate the *Pond* functionality without making any changes to your current robot project.
+>
+> In any case, the 2 setup methods allow you to reach the same result as the Pond library is always used as a library reference. The only difference is the path to get there.
 {: .notice--info}
 
 ## Option 1: Quick-Start Repository
 
-> **Recommendation**: This is the recommended way to get started as it is the fastest and allows you to evaluate the library functionality with little to no effort. Moreover, in this way your can easily setup a separate repository aside from your current project, thus allowing you to evaluate it without making any changes to your current project.
-{: .notice--success}
+### Fork the Repository (skip if evaluating only)
 
-### Clone the Repository (for evaluation)
+This step shows how to [fork][GithubFork] the starter repository in your own [Github] account or team organization. This is recommended if you are planning to use the started repository as the base for your team code.
 
-**From Android Studio**
-
-1. Install *Android Studio* from <https://developer.android.com/studio>{:target="_blank" rel="noopener"}
-2. Open *Android Studio* and choose 'Clone Repository'
-    <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" alt="" />
-3. Give the repository URL:
-   `https://github.com/FTC-23206/automaducks-pond-starter.git`
-
-**From Command Line**
-
-1. Install *git* from <https://git-scm.com/downloads>{:target="_blank" rel="noopener"}
-2. Open `Command Prompt` or `Terminal` and navigate to the desired repository location
-3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository:
-
-    ```powershell
-    git clone https://github.com/FTC-23206/automaducks-pond-starter.git
-    ```
-
-4. Open the the root of the repository with *Android Studio*
-
-### Change the configuration to match your robot configuration
-
-1. Use FTC Dashboard to try the correct configuration
-   1. Connect your computer to your robot wifi
-   2. Open <http://192.168.43.1:8080/dash>{:target="_blank" rel="noopener"} on web browser
-   3. Configure `Chassis` motors to match your robot hub configuration
-   4. Run the robot drive operation and verify it runs correctly (see section below for configuration troubleshooting)
-2. Once you have the correct configuration, update the code to match your temporary configuration
-
-> **Motors  Configuration Troubleshooting**
-> (Pending)
-{: .notice--warning}
-
-### Fork the repository (Make it your own!)
-
-Once you have decided to continue on this path you should fork the repository so you can continue developing on your own team repository:
+> You can skip this step if you only want to copy the code locally on your machine (or if you still don't have a github account)
+{: .notice}
 
 1. Sign-in to [Github](https://github.com/){:target="_blank" rel="noopener"}
 2. Open <https://github.com/FTC-23206/automaducks-pond-starter>{:target="_blank" rel="noopener"}
@@ -66,6 +33,51 @@ Once you have decided to continue on this path you should fork the repository so
     <img src="/images/pond/pond-github-starter-fork.png" width="600" style="display: block; margin: 0 auto;" alt="Shows github fork button" />
 
 4. Clone your own repository so you can continue to make changes to your robot project.
+
+### Clone the Repository
+
+This step downloads the code to your machine and allow you to create the FTC [Android Studio] project.
+
+**From Android Studio**
+
+1. Install *Android Studio* from <https://developer.android.com/studio>{:target="_blank" rel="noopener"}
+2. Open *Android Studio* and choose 'Clone Repository'
+    <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" alt="" />
+3. Give the repository URL:
+    1. Give the URL of your forked repository.
+    2. If you've decided to to skip the fork step, use `https://github.com/FTC-23206/automaducks-pond-starter.git`
+
+**From Command Line (Advanced)**
+
+1. Install *git* from <https://git-scm.com/downloads>{:target="_blank" rel="noopener"}
+2. Open `Command Prompt` or `Terminal` and navigate to the desired repository location
+3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository:
+
+    1. If you forked the repository:
+
+        ```powershell
+        git clone URL_TO_YOUR_FORKED_REPOSITORY
+        ```
+
+    1. If you skipped forking the repository:
+
+        ```powershell
+        git clone https://github.com/FTC-23206/automaducks-pond-starter.git
+        ```
+
+4. Open the the root of the repository with *Android Studio*
+
+### Build the Project
+
+At this point you should be able to successfully build the project:
+
+<img src="/images/pond/pond-android-build.png" width="600" style="display: block; margin: 0 auto;" alt="Android Studio Build" />
+
+1. Shows the project files
+2. Click on the 'Make' button
+3. Once it completes, it should show a successful build operation.
+
+Now learn how to run and modify the code on the [Getting Started](/pond/getting-started) page.
 
 ## Option 2: In-Place Update
 
@@ -141,3 +153,12 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
 
 2. Sync the project with gradle files (`CTRL+SHIFT+O`)
 3. Rebuild `TemCode` project (`F7`)
+
+### Integrating with Pond
+
+Continue to [Pond Integration](/pond/integration) for information on how to integrate the pond library on your project.
+
+[Github]: <https://www.github.com> "Github"
+[GithubFork]: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo> "Github Fork"
+[Android Studio]: <https://developer.android.com/studio> "Android Studio"
+
