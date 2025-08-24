@@ -14,9 +14,9 @@ Using kinematics, we know the robot's coordinates and orientation on the field. 
 Provides an accurate **field-relative localization** using three unpowered encoded wheels (dead wheels) by comparing encoder delta's over time.
 
 ### Updates
-`update` takes the integer positions of the left, right, and center dead wheel.
+`update` takes the integer positions of the left, right, and center dead wheel to calculate the new robot position on the field.
 
-`updateAndReset` takes the integer positions of the dead wheels as well as a pose. 
+`updateAndReset` takes the integer positions of the dead wheels as well as a pose to set the robots current position to the current one and the velocity to zero. 
 
 ### Getting Pose and Velocity
 Simply returns the `currentPoseAndVelocity` in the form of a PoseAndVelocity.
