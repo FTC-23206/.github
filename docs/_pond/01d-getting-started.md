@@ -214,8 +214,73 @@ Once the target power is stored, the `periodic` method calculates the power for 
 This method makes use of the `MecanumInverseKinematics` class to calculate the power given to each wheel.
 
 ### Dead Wheels Localizer
+`DeadWheelLocalizer` is a sample subsystem intended on providing a localization of the robot based on the encoded dead wheels of a robot. It is also a real time subsystem since it implements the `ILocalizer` interface. This example relies on 3 dead wheels (left, right, and center), and makes use of the `DeadWheelsKinematics` class to get the positions of our dead wheels on the field.
+
+The constructor, similar to the `MecanumDrive` subsystem, uses the `HardwareMapAccessor` to get the encoders of our dead wheels and set them to the member variables. It also uses the setMode method to reset the encoders. You can also see below how the new DeadWheelsKinematics instance uses the dead wheels defined in the configuration for the chassis.
+
+```java
+public class DeadWheelsLocalizer extends SubsystemBase implements ILocalizer {
+
+    private final DeadWheelsKinematics deadWheelsKinematics;
+
+    private final DcMotor deadWheelRight;
+    private final DcMotor deadWheelLeft;
+    private final DcMotor deadWheelCenter;
+
+    public DeadWheelsLocalizer(HardwareMapAccessor hardwareMap, ITelemetryLogger logger) {
+        super(logger);
+
+        this.deadWheelsKinematics = new DeadWheelsKinematics(logger, Configuration.Chassis.DeadWheels);
+
+        this.deadWheelLeft = hardwareMap.getMotor(Configuration.Chassis.MotorRearLeft);
+        this.deadWheelRight = hardwareMap.getMotor(Configuration.Chassis.MotorRearRight);
+        this.deadWheelCenter = hardwareMap.getMotor(Configuration.Chassis.MotorFrontRight);
+
+        this.deadWheelLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        this.deadWheelRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        this.deadWheelCenter.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+    }
+```
+The methods within this class are `getLocalization`, `setLocalization`, and `periodic`. 
+
+`getLocalization` uses the `DeadWheelsKinematics` class to return the robots current pose and velocity.
+
+```java
+    @Override
+    public PoseAndVelocity getLocalization() {
+        return this.deadWheelsKinematics.getPositionVelocity();
+    }
+```
+`setLocalization` sets the position of the dead wheels to the current robot position and the velocity to zero using the `updateAndReset` method (see kinematics for more information). 
+
+```java
+    @Override
+    public void setLocalization(Pose2D pose) {
+        this.deadWheelsKinematics.updateAndReset(
+            deadWheelLeft.getCurrentPosition(),
+            deadWheelRight.getCurrentPosition(),
+            deadWheelCenter.getCurrentPosition(),
+            pose);
+    }
+```
+
+`periodic` iterates in every robot processing cycle, it updates the position of the robot using the dead wheels current position. 
+
+```java
+    @Override
+    public void periodic() {
+        this.deadWheelsKinematics.update(
+            -deadWheelLeft.getCurrentPosition(),
+            -deadWheelRight.getCurrentPosition(),
+            deadWheelCenter.getCurrentPosition());
+
+        this.logger.displayData("Localization", getLocalization().pose);
+    }
+```
 
 ### Arm Controller
+
+Coming soon!
 
 ## Sample Autonomous
 
