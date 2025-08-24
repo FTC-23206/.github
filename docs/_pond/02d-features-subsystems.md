@@ -12,7 +12,7 @@ The Holonomic controller is used when controlling the drivetrain in autonomous o
 
 `HolonomicController` : completes the calculations for actuation (also applies gains). Initializes the controller with params and logging utilities.
 
-`HolonomicControllerParams` : holds the adjustable params within instsances of the Holonomic controller. These can be tuned in FTC Dashboard *or* in Configuration to your specific holonomic drivetrain. Speed gains account for..., and position gains account for....
+`HolonomicControllerParams` : holds the adjustable params within instsances of the Holonomic controller. These can be tuned in FTC Dashboard *or* in Configuration to your specific holonomic drivetrain. Speed gains are the factors that multiply the delta between the target speed and the current speed, and position gains are the factors that multiply the delta between the target position and current position.
 
 ### Drivetrain
 The `IDrivetrain` interface is used to define the frame for controlling a drivetrain in driver-controlled operations, by using the `setPower` method to apply external outputs (ex. the gamepad) to your drivetrain.
