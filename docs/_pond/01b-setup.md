@@ -102,6 +102,7 @@ After a successful build, you are ready to start leveraging the *Pond* libraries
 This is not require but Pond is made to work well with FTC dashboard as it can leverage dynamic configuration changes and graphing.
 
 1. Similar to the above, update your Team Code `build.gradle` per below:
+
     ```gradle
     //
     // build.gradle in TeamCode
@@ -156,4 +157,3 @@ Continue to [Pond Integration](/pond/integration) for information on how to inte
 [Github]: <https://www.github.com> "Github"
 [GithubFork]: <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo> "Github Fork"
 [Android Studio]: <https://developer.android.com/studio> "Android Studio"
-

@@ -4,8 +4,8 @@ permalink: /pond/integration
 toc: true
 ---
 
-> **Wacth Out!:** You can **skip this page if you are using the 'Quick-Start Repository' setup method** as the integration requirements are already taken care for you.
-{: .notice--warning}
+> **Skip this page** if you are using the 'Quick-Start Repository' setup method. The integration requirements are already taken care for you.
+{: .notice--primary}
 
 ## Requirements
 

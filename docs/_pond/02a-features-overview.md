@@ -5,20 +5,40 @@ toc: true
 ---
 ## Overview
 
-These are all of the packages available in Pond:
+With Pond, you can build performant and reliable code for your FTC code through a modular and event-driven coding paradigm. The Pond library functionality is separated in the following packages:
 
 <img src="/images/pond/pond-packages.png" width="600" style="display: block; margin: 0 auto;" />
 
-### Package Functionality
+| Package      | Contents                                                                     |
+| :----------- | :--------------------------------------------------------------------------- |
+| `Common`     | Common classes such as Pose2D, Duration, Stopwatch, etc.                     |
+| `Commands`   | Command execution systems and common commands                                |
+| `Control`    | Hardware control classes such as PID implementations                         |
+| `Kinematics` | Robot movement classes as Mecanum Forward and Inverse kinematics calculators |
+| `Subsystems` | Robot organization into subsystems and hubs                                  |
+| `Utility`    | Utility classes for math, logging, strings, etc.                             |
 
-| Package    | Contents                                                                        |
-| :--------- | :------------------------------------------------------------------------------ |
-| Common     | Common classes such as Pose2D, Duration, Stopwatch, etc.                        |
-| Commands   | Command execution systems and common commands                                   |
-| Control    | Systems control such as PID                                                     |
-| Kinematics | Robot kinematics such as Mecanum Forward and Inverse kinematics calculators |
-| Subsystems | Robot organization into subsystems                                              |
-| Utility    | Utility classes for math, logging, strings, etc.                                |
+## Event-Driven Programming
+
+FTC robots must be periodically evaluating their state - reading sensors, motor encoders, calculating odometry - but it is not trivial to program robot operations while ensuring that all components of the robot continue operating without delay. Event driven programming enables simple and efficient programming in a very simple an concise manner.
+
+* Robot periodically process all its subsystems automatically
+* Robot periodically monitors for the trigger conditions and runs the commands when required
+
+The library also provides conditional helpers which makes it easy to check changes in state of buttons and sensors.
+
+> **Competitiveness**: This structure supports intelligent, competitive robot behavior—whether you're following a trajectory or reacting to game elements.
+{: .notice--info}
+
+Example:
+
+```java
+// Moves the arm only when the button A was just pressed
+commandScheduler.runPeriodically(Commands.dynamic()
+    .when(CommandConditionBuilder::Always)
+    .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
+    .build("JoystickCommand"));
+```
 
 ## Subsystems
 
@@ -43,24 +63,5 @@ protected void onInit() {
 }
 ```
 
-## Event-Driven Programming
-
-FTC robots must be periodically evaluating their state - reading sensors, motor encoders, calculating odometry - but it is not trivial to program robot operations while ensuring that all components of the robot continue operating without delay. Event driven programming enables simple and efficient programming in a very simple an concise manner.
-
-* Robot periodically process all its subsystems automatically
-* Robot periodically monitors for the trigger conditions and runs the commands when required
-
-The library also provides conditional helpers which makes it easy to check changes in state of buttons and sensors.
-
-> **Competitiveness**: This structure supports intelligent, competitive robot behavior—whether you're following a trajectory or reacting to game elements.
-{: .notice--info}
-
-Example:
-
-```java
-// Moves the arm only when the button A was just pressed
-commandScheduler.runPeriodically(Commands.dynamic()
-    .when(CommandConditionBuilder::Always)
-    .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
-    .build("JoystickCommand"));
-```
+> Continue reading through the next sections for a more complete view of the functionality!
+{: .notice--success}
