@@ -20,6 +20,7 @@ Here are the main benefits of the library:
 Continue reading below for an overview of the main benefits:
 
 * [Setup](/pond/setup) for setting up your project
+* [Getting Started](/pond/getting-started) for a quick taste of the robot code with pond
 * [Features Overview](/pond/features-overview) to learn more about the library
 
 Also, see Pond Quick-Start [Team Code](https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode){:target="_blank" rel="noopener"} for a complete example of how working with Pond looks like.
