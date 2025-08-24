@@ -14,7 +14,7 @@ Here are the main benefits of the library:
 3. Works seamlessly with other popular libraries such as [Road Runner]{:target="_blank" rel="noopener"}, [FTC Dashboard]{:target="_blank" rel="noopener"} without depending on them.
 4. It does not depend on the FTC SDK, thus allowing teams to have full control on FTC SDK version upgrade.
 
-> **Beginner** teams can write advanced robot code by following the examples and using out-of-the-box library functionality while **veteran** teams can extend library functionality and also decide with specific features to use, based on the team needs.
+> **Beginner** teams can write advanced robot code by following the examples and using out-of-the-box library functionality while **veteran** teams can extend library functionality and also decide which specific features to use, based on the team needs.
 {: .notice--info}
 
 Continue reading below for an overview of the main benefits:
