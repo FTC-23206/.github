@@ -28,14 +28,14 @@ search: false
 }
 
 .page__content pre code {
-  font-size: 0.9em;       /* slightly smaller font */
+  font-size: 0.8em;       /* slightly smaller font */
   line-height: 1.4;       /* tightest reliable value */
   display: block;         /* ensures line-height applies properly */
 }
 
 .page__content code {
   margin: 0;              /* remove extra spacing around */
-  padding: 0.7em 0.8em;   /* adjust to taste */
+  padding: 0.0em 0.0em;   /* adjust to taste */
 }
 
 .toc__menu {
