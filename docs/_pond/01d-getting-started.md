@@ -8,12 +8,13 @@ toc: true
 
 This page you guide you step-by-step through the Pond starter classes, while explaining their basic functionality.
 
-> Remember, *Pond* assists in writing high-performance robot code by making sure that all processing happens in the "periodic" method of Commands and Subsystem. For this to work correctly, you should never block the execution in your robot code (either by having infinite loops or calling *sleep* method).
-{: .notice--danger}
+> Remember, **Pond** assists in writing high-performance robot code by making sure that all processing happens in the "periodic" method of Commands and Subsystem. For this to work correctly, you should never block the execution in your robot code (either by having infinite loops or calling *sleep* method).
+{: .notice--warning}
 
 ## Sample Operation Drive
 
 > File: OperationDrive
+{: .notice}
 
 This class extends the *OperationBase* base class from the Pond integrations and defines 4 methods:
 
@@ -99,6 +100,7 @@ Any final code that you may want to run when the robot is stopped.
 ## Sample Configuration
 
 > File: Configuration
+{: .notice}
 
 All robots need configurations values, and most likely, lots of them! While *Pond* does not require [FTC Dashboard], it's defined in a way to make it easy for the required configuration values to be compatible with its use.
 
@@ -112,10 +114,10 @@ public class Configuration {
     public static class Chassis {
 
         // Motors
-        public static MotorParams MotorFrontLeft    = new MotorParams("front_left", MotorParams.Mode.RUN_WITHOUT_ENCODER,false);
-        public static MotorParams MotorFrontRight   = new MotorParams("front_right", MotorParams.Mode.RUN_WITHOUT_ENCODER,true);
-        public static MotorParams MotorRearLeft     = new MotorParams("rear_left", MotorParams.Mode.RUN_WITHOUT_ENCODER,false);
-        public static MotorParams MotorRearRight    = new MotorParams("rear_right", MotorParams.Mode.RUN_WITHOUT_ENCODER,true);
+        public static MotorParams MotorFrontLeft    = new MotorParams("front_left", MotorParams.Mode.RUN_WITHOUT_ENCODER, false);
+        public static MotorParams MotorFrontRight   = new MotorParams("front_right", MotorParams.Mode.RUN_WITHOUT_ENCODER, true);
+        public static MotorParams MotorRearLeft     = new MotorParams("rear_left", MotorParams.Mode.RUN_WITHOUT_ENCODER, false);
+        public static MotorParams MotorRearRight    = new MotorParams("rear_right", MotorParams.Mode.RUN_WITHOUT_ENCODER, true);
 
         // Dead wheels parameters
         public static DeadWheelsKinematicsParams DeadWheels = new DeadWheelsKinematicsParams(
@@ -135,19 +137,21 @@ public class Configuration {
             StandardGearRatios.GOBILDA_223_RPM,
             5.0);
 
-        public static MotorParams MotorArm = new MotorParams("slide_pivot", MotorParams.Mode.RUN_TO_POSITION,true);
+        public static MotorParams MotorArm = new MotorParams("slide_pivot", MotorParams.Mode.RUN_TO_POSITION, true);
     }
 
     // ...
 }
 ```
 
-The `Configuration` class holds all robot parameters that may need to be adjusted (either because you are a new team using the repository, or because the the team is trying out different settings). Each subsection is defined as a child `static` class. This also allows for each one of the sections to be published to [FTC Dashboard] through the `@Config` attribute
+The `Configuration` class holds all robot parameters that may need to be adjusted (either because you are a new team using the repository, or because the the team is trying out different settings).
 
-> If you don't want to use FTC Dashboard, simply remove the `@Config` attributes.
-{: .notice}
+Each subsection is defined as a child `static` class. This also allows for each one of the sections to be published to [FTC Dashboard] through the `@Config` attribute (If you don't want to use FTC Dashboard, simply remove the `@Config` attributes).
 
-The `Chassis` subsection holds all the configuration values for your drive train.
+The `Chassis` subsection holds all the configuration values for your drive train. It has configurations for each motor, including the hardware names configured in your robot through the Drive Hub. It has also parameters for the odometry through dead wheels.
+
+> **IMPORTANT**: Make sure that the motor names match your robot hardware configuration! Also, pay attention the the *boolean* (true or false) values in the end of each configuration as they indicate whether or not the direction of the motor needs to be inverted.
+{: .notice--warning}
 
 ## Sample Subsystems
 
@@ -159,98 +163,7 @@ The `Chassis` subsection holds all the configuration values for your drive train
 
 ## Sample Autonomous
 
-TBD
-
-# TO BE MOVED:
-
-
-
-## Using Kinematics Classes
-
-Kinematic classes in Pond are designed to abstract the complex math of robot movement and localization into reusable, testable, and modular components. Whether you're a beginner or a veteran team, they help separate what your robot should do from how it does it, keeping your code clean and scalable.
-
-**What Are Kinematic Classes?**
-
-A kinematic class is a custom class you create to handle the math and logic of how your robot should move — typically based on forward and inverse kinematics.
-Instead of telling each motor what to do individually, you tell your kinematic class what movement you want, and it calculates the motor powers for you.
-
-**What Are Kinematic Classes in Pond?**
-
- Kinematic classes in Pond, like:
-- MecanumForwardKinematics
-- MecanumInverseKinematics
-- MecanumKinematicsParams
-
-...are math utilities that calculate:
-- Inverse kinematics: What motor outputs are needed to move the robot a certain way
-- Forward kinematics: What the robot’s actual movement is based on encoder/motor inputs
-
-These are independent of the FTC SDK and designed to integrate into Pond’s subsystems and commands model.
-
-**In Summary**
-
-Kinematic classes in Pond give you:
-- Accurate movement & localization math
-- Cleaner, more modular robot code
-- A beginner-friendly path to advanced control
-- A system that integrates seamlessly into Pond's subsystem & command structure
-
-They are perfect for teams who want:
-- Simplified TeleOp control
-- Real-time pose estimation in Autonomous
-- A customizable alternative to full localization libraries like Road Runner
-
-
-## Writing Your First Subsystem
-
-**Using SubsystemBase**
-
-To keep your robot code clean and consistent, all your subsystems should extend from SubsystemBase. This gives you built-in support for logging, without repeating the same setup every time.
-
-**What Is SubsystemBase?**
-
-SubsystemBase is a class your team created to make writing subsystems easier. It:
-
-- Sets up a logger for each subsystem
-
-- Automatically generates a clear log tag (like subsys/DrivetrainSubsystem)
-
-- Makes your code shorter, cleaner, and easier to debug
-
-   
-## Writing Your First Command
-
-**How to Use It**
-
-Here’s how you extend SubsystemBase in your own subsystem:
-
-Step 1: Create a New Subsystem Class
-
-Start by creating a new Java file for your subsystem. For example:
-```
-// DrivetrainSubsystem.java
-package com.automaducks.pond.subsystems;
-
-public class DrivetrainSubsystem extends SubsystemBase {
-    // You’ll add your code here next
-}
-```
-
-This makes the class inherent everything from SubystemBase, like logging and utility functions.
-
-Step 2: 
-Inside your class, create variables. You'll need a logger to return telemetry during operation:
-
-```
-    private final ITelemetryLogger logger;
-```
-
-Hardware and control parameters, variables that store your hardware and control settings:
-
-```
-private final DcMotor leftMotor;
-private final DcMotor rightMotor;
-```
+Coming soon!
 
 [Pond Integration]: </pond/integration> "Pond Integration"
 [FTC Dashboard]: <https://acmerobotics.github.io/ftc-dashboard/> "FTC Dashboard"

@@ -80,3 +80,38 @@ ParallelCommand starts multiple commands at the same time, runs them together, a
 `setLogger` → Passes the telemetry logger to itself and all child commands.
 
 
+
+
+## Writing Your First Command
+
+**How to Use It**
+
+Here’s how you extend SubsystemBase in your own subsystem:
+
+Step 1: Create a New Subsystem Class
+
+Start by creating a new Java file for your subsystem. For example:
+```
+// DrivetrainSubsystem.java
+package com.automaducks.pond.subsystems;
+
+public class DrivetrainSubsystem extends SubsystemBase {
+    // You’ll add your code here next
+}
+```
+
+This makes the class inherent everything from SubystemBase, like logging and utility functions.
+
+Step 2: 
+Inside your class, create variables. You'll need a logger to return telemetry during operation:
+
+```
+    private final ITelemetryLogger logger;
+```
+
+Hardware and control parameters, variables that store your hardware and control settings:
+
+```
+private final DcMotor leftMotor;
+private final DcMotor rightMotor;
+```

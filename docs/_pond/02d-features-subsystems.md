@@ -37,3 +37,22 @@ A SubsystemHub stores a list of subsystems. Having a Subsystem Hub makes running
 `ISubsystemHub` : extends `IRealTimeSubsystem`. Contains the functions `add`, `findFirst`, and `remove`. The `add` function adds subsystems to the hub, the `findFirst` function returns the first subsystem in the hub that matches the given class type (throws an exception if none is found), and the `remove` function simply removes the subsystem from the hub.
 
 `SubsystemHub` : extends `SubsystemBase` and implements `ISubsystem`. Has the same functions as `ISubsystemHub` and calls `periodic` on all subsystems in the hub that implement `IRealTimeSubsystem`.
+
+
+
+
+## Writing Your First Subsystem
+
+**Using SubsystemBase**
+
+To keep your robot code clean and consistent, all your subsystems should extend from SubsystemBase. This gives you built-in support for logging, without repeating the same setup every time.
+
+**What Is SubsystemBase?**
+
+SubsystemBase is a class your team created to make writing subsystems easier. It:
+
+- Sets up a logger for each subsystem
+
+- Automatically generates a clear log tag (like subsys/DrivetrainSubsystem)
+
+- Makes your code shorter, cleaner, and easier to debug
