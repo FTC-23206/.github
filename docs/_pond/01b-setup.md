@@ -139,7 +139,7 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
         implementation project(':FtcRobotController')
 
         // Pond
-        implementation 'com.automaducks:pond:0.9.0'
+        implementation 'com.automaducks:pond:0.9.1'
 
         // ACME Libraries
         implementation 'com.acmerobotics.roadrunner:core:1.0.1'
