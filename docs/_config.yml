@@ -36,10 +36,10 @@ whitelist:
   - jekyll-feed
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Automaducks"
+locale                   : en-US
+title                    : Automaducks
 title_separator          : "-"
-subtitle                 : "FTC 23206"
+subtitle                 : FTC 23206
 name                     : &name "Automaducks" # &name is a YAML anchor which can be *referenced later
 description              : &description "This is the FIRST FTC 23206 team site. It has information about our journey and resources for your FIRST FTC team!"
 url                      : https://www.automaducks.com

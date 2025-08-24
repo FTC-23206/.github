@@ -1,7 +1,7 @@
 ---
 layout: home
 permalink: /
-title: '<span style="color:rgb(207, 195, 27)">Automaducks</span>'
+title: Automaducks
 hidden: true
 header:
   overlay_color: "#40514e"
