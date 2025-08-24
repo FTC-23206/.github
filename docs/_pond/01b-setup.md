@@ -10,18 +10,18 @@ There are 2 available setup methods:
 
 * **Quick-Start Repository**: zero-code process that gets you started from a new FTC Repo which is ready to run. This is recommended for beginner to intermediate teams which are not looking into bringing their existing code *as-is* to the new repository.
 
-* **In-Place Update**: add Pond library reference to your existing code. This is recommended for advanced teams who wants to be selective about how to integrate and which functionality to depend on.
+* **In-Place Update**: add Pond library reference to your existing code. This is recommended for advanced teams who want to be selective about how to integrate and which functionalities to depend on.
 
-> **Recommendation**: The *Quick-Start Repository* is the recommended way to get started as it is the fastest option and allows you to quickly evaluate the library functionality with little to no effort. Additionally, setting up a new repository allows you to evaluate the *Pond* functionality without making any changes to your current robot project.
+> **Recommendation**: The *Quick-Start Repository* is the recommended way to get started as it allows you to quickly evaluate the library functionality with little to no effort. Additionally, setting up a new repository allows you to evaluate the *Pond* functionality without making any changes to your current robot project.
 >
-> In any case, the 2 setup methods allow you to reach the same result as the Pond library is always used as a library reference. The only difference is the path to get there.
+> In any case, the 2 setup methods reach the same result since the Pond library is always used as a library reference. The only difference is the path used to get there.
 {: .notice--info}
 
 ## Option 1: Quick-Start Repository
 
 ### Fork the Repository (skip if evaluating only)
 
-This step shows how to [fork][GithubFork] the starter repository in your own [Github] account or team organization. This is recommended if you are planning to use the started repository as the base for your team code.
+This step shows how to [fork][GithubFork] the starter repository in your [Github] account or team organization. This is recommended if you are planning to use the starter repository as the base for your team code.
 
 > You can skip this step if you only want to copy the code locally on your machine (or if you still don't have a github account)
 {: .notice}
@@ -29,19 +29,17 @@ This step shows how to [fork][GithubFork] the starter repository in your own [Gi
 1. Sign-in to [Github](https://github.com/){:target="_blank" rel="noopener"}
 2. Open <https://github.com/FTC-23206/automaducks-pond-starter>{:target="_blank" rel="noopener"}
 3. Click on *Fork* and provide the requested information (make sure you are making the fork to your Team organization or your own account)
-
     <img src="/images/pond/pond-github-starter-fork.png" width="600" style="display: block; margin: 0 auto;" alt="Shows github fork button" />
-
 4. Clone your own repository so you can continue to make changes to your robot project.
 
 ### Clone the Repository
 
-This step downloads the code to your machine and allow you to create the FTC [Android Studio] project.
+This step downloads the code to your machine and allows you to create the FTC [Android Studio] project.
 
 **From Android Studio**
 
 1. Install *Android Studio* from <https://developer.android.com/studio>{:target="_blank" rel="noopener"}
-2. Open *Android Studio* and choose 'Clone Repository'
+2. Open *Android Studio* and click 'Clone Repository'
     <img src="/images/pond/pond-android-clone.png" width="600" style="display: block; margin: 0 auto;" alt="" />
 3. Give the repository URL:
     1. Give the URL of your forked repository.
@@ -52,7 +50,6 @@ This step downloads the code to your machine and allow you to create the FTC [An
 1. Install *git* from <https://git-scm.com/downloads>{:target="_blank" rel="noopener"}
 2. Open `Command Prompt` or `Terminal` and navigate to the desired repository location
 3. Clone the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository:
-
     1. If you forked the repository:
 
         ```powershell
@@ -86,7 +83,6 @@ Now learn how to run and modify the code on the [Getting Started](/pond/getting-
 1. Make sure your `TeamCode` project successfully builds in Android Studio (`F7`)
 2. Add the following to your Team Code gradle file
     File: `(RepositoryRoot)\TeamCode\build.gradle`
-
     ```gradle
     dependencies {
         implementation project(':FtcRobotController')
@@ -106,7 +102,6 @@ After a successful build, you are ready to start leveraging the *Pond* libraries
 This is not require but Pond is made to work well with FTC dashboard as it can leverage dynamic configuration changes and graphing.
 
 1. Similar to the above, update your Team Code `build.gradle` per below:
-
     ```gradle
     //
     // build.gradle in TeamCode

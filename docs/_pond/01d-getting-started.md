@@ -8,7 +8,7 @@ toc: true
 
 This page you guide you step-by-step through the Pond starter classes, while explaining their basic functionality.
 
-> Remember, *Pond* allows you to write high-performance robot code by making sure that all processing happens on the "periodic" methods  of Commands and Subsystem. For this to work correctly, you should never block the execution on your robot code (either by having infinite loops or calling *sleep* method).
+> Remember, *Pond* assists in writing high-performance robot code by making sure that all processing happens in the "periodic" method of Commands and Subsystem. For this to work correctly, you should never block the execution in your robot code (either by having infinite loops or calling *sleep* method).
 {: .notice--danger}
 
 ## Sample Operation Drive
@@ -18,9 +18,9 @@ This class extends the *OperationBase* base class from the Pond integrations and
 | Method     | When it Executes                            | What it Does                                                                                                                       |
 | :--------- | :------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | onInit     | Called on Drive Hub operation `Init`        | Initializes robot components (no movement is allowed)                                                                              |
-| onStart    | Called on Drive Hub operation `Start`       | Creates commands that allow for the robot controlling                                                                              |
+| onStart    | Called on Drive Hub operation `Start`       | Creates commands that allow for robot control                                                                              |
 | onPeriodic | Called periodically after onStart completes | Allows for any custom recurring code to be executed. Please favor using commands or subsystems instead adding code in this method. |
-| onStop     | Called on Drive Hub operation `Stop`        | Allow for custom code to be executed when the drive operation ends. |
+| onStop     | Called on Drive Hub operation `Stop`        | Allows for custom code to be executed when the drive operation ends. |
 
 ### onInit
 
@@ -42,7 +42,7 @@ Once the subsystems are added, they are ready to be operated. Since no movement 
 
 ### onStart
 
-Creates the require commands to operate the robot during drive operation.
+Creates the required commands to operate the robot during drive operation.
 
 ```java
     @Override
@@ -77,18 +77,18 @@ Creates the require commands to operate the robot during drive operation.
     }
 ```
 
-At the beginning of the method, the required subsystems are retrieved from the robot, so they can be references by the commands.
+At the beginning of the method, the required subsystems are retrieved from the robot, so they can be referenced by commands.
 
-The `chassisMovement` command is executes continuously and at every cycle, it reads the joystick values and set the power targets on the drive train accordingly. This is what controls the movement of the robot on the field.
+The `chassisMovement` command executes continuously, and at every cycle, it reads the joystick values and sets the power targets on the drive train accordingly. This is what controls robot movement on the field.
 
-The `armMovement` command monitors button presses and when a button is pressed it executes the intended movement on the arm. In this case button `A` raises the robot arm and button `B` lowers the arm. Note that the commands are wrapped by an `anyOf` command, which will execute only one command of the set at a time.
+The `armMovement` command monitors buttons and when a button is pressed it executes the intended movement on the arm. In this case button `A` raises the robot arm and button `B` lowers the arm. Note that the commands are wrapped by an `anyOf` command, which will execute one command of the set at a time.
 
-> Notice that there are no loops on this method! The commands that allow for the robot to be controlled are created and they will continuously do their job until the Drive Operation end. Isn't that neat 😀
+> Notice that there are no loops in this method! The commands that control the robot are created and they will continuously do their job until the Drive Operation end. Isn't that neat 😀
 {: .notice--success}
 
 ### onPeriodic
 
-This method is called on every processing cycle of the robot. If you are making good use of Subsystems and Commands, you should not have any code in this method.
+This method is called on every processing cycle. If you are making good use of Subsystems and Commands, you should not have any code in this method.
 
 ### onStop
 
