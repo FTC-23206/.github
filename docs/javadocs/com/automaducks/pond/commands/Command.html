@@ -170,12 +170,6 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>private  boolean</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#isCompleted>isCompleted</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
                                     </table>
                                 </div>
                             </li>
@@ -218,25 +212,17 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                         <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code>boolean</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#getIsCompleted()>getIsCompleted</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#getShouldStart()>getShouldStart</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets a value indicating whether or not command is completed.</td>
+                                            <td class="colLast">Gets a value indicating whether or not command is supposed to execute based on its start condition.</td>
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>void</code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#setIsCompleted(boolean)>setIsCompleted</a>(boolean isCompleted) </code>
-                                            </th>
-                                            <td class="colLast">Set the command completed state.</td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code>boolean</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#getIsTriggered()>getIsTriggered</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#getShouldStop()>getShouldStop</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets a value indicating whether or not command is supposed to execute based on its trigger condition.</td>
+                                            <td class="colLast">Gets a value indicating whether or not command execution is completed.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -287,55 +273,31 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                     </li>
                                 </ul>
                                 
-                                <a id="getIsCompleted()">
+                                <a id="getShouldStart()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getIsCompleted</h4>
-                                        <pre class="methodSignature"> boolean <a href=Command.html#getIsCompleted()>getIsCompleted</a>()</pre>
-                                        <div class="block"><p>Gets a value indicating whether or not command is completed.</p></div>
+                                        <h4>getShouldStart</h4>
+                                        <pre class="methodSignature"> boolean <a href=Command.html#getShouldStart()>getShouldStart</a>()</pre>
+                                        <div class="block"><p>Gets a value indicating whether or not command is supposed to execute based on its start condition.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="setIsCompleted(boolean)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>setIsCompleted</h4>
-                                        <pre class="methodSignature"> void <a href=Command.html#setIsCompleted(boolean)>setIsCompleted</a>(boolean isCompleted)</pre>
-                                        <div class="block"><p>Set the command completed state.</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>isCompleted</code> - a boolean value indicating whether or not the command is completed.</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getIsTriggered()">
+                                <a id="getShouldStop()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getIsTriggered</h4>
-                                        <pre class="methodSignature"> boolean <a href=Command.html#getIsTriggered()>getIsTriggered</a>()</pre>
-                                        <div class="block"><p>Gets a value indicating whether or not command is supposed to execute based on its trigger condition.</p></div>
+                                        <h4>getShouldStop</h4>
+                                        <pre class="methodSignature"> boolean <a href=Command.html#getShouldStop()>getShouldStop</a>()</pre>
+                                        <div class="block"><p>Gets a value indicating whether or not command execution is completed.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

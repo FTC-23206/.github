@@ -35,5 +35,4 @@ feature_row:
 
 #### Check It Out
 
-* Check out the beta release of Pond library: [Welcome to the Pond!](https://www.automaducks.com/pond)
-
+Check out the beta release of Pond library: [Welcome to the Pond!](/pond)

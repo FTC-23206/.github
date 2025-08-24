@@ -119,34 +119,6 @@ extends <a href=Command.html>Command</a>
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
                     
-                    <section role="region">
-                        <ul class="blockList">
-                            <li class="blockList"><a id="nested.class.summary">
-                                <!--   -->
-                            </a>
-                                <h3>Nested Class Summary</h3>
-                                <div class="memberSummary">
-                                    <table>
-                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
-                                        <tr>
-                                            <th class="colFirst" scope="col">Modifier and Type</th>
-                                            <th class="colSecond" scope="col">Class</th>
-                                            <th class="colLast" scope="col">Description</th>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>public class</code></td>
-                                            <th class="colSecond" scope="row"><code><a href="DynamicCommand.DynamicCommandBuilder.html">DynamicCommand.DynamicCommandBuilder</a></span></code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                    </table>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                    
                     <!-- =========== FIELD SUMMARY =========== -->
                     
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -175,22 +147,14 @@ extends <a href=Command.html>Command</a>
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
-                                            <td class="colFirst"><code>static <a href=DynamicCommand.DynamicCommandBuilder.html>DynamicCommand.DynamicCommandBuilder</a></code>
+                                            <td class="colFirst"><code>boolean</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#when(Function)>when</a>(<a href=https://developer.android.com/reference/kotlin/java/util/function/Function.html>Function</a>&lt;<a href=CommandConditionBuilder.html>CommandConditionBuilder</a>, <a href=https://developer.android.com/reference/kotlin/java/util/function/Supplier.html>Supplier</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a>&gt;&gt; condition) </code>
+                                            <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#getShouldStart()>getShouldStart</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
+                                            <td class="colLast">Gets a value indicating whether or not command is supposed to execute based on its start condition.</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code>boolean</code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#getIsTriggered()>getIsTriggered</a>() </code>
-                                            </th>
-                                            <td class="colLast">Gets a value indicating whether or not command is supposed to execute based on its trigger condition.</td>
-                                        </tr>
-                                        
-                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>void</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#periodic()>periodic</a>() </code>
@@ -198,12 +162,12 @@ extends <a href=Command.html>Command</a>
                                             <td class="colLast">Command periodic code while the command is running.</td>
                                         </tr>
                                         
-                                        <tr id="i3" class="rowColor">
+                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>boolean</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#getIsCompleted()>getIsCompleted</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=DynamicCommand.html#getShouldStop()>getShouldStop</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets a value indicating whether or not command is completed.</td>
+                                            <td class="colLast">Gets a value indicating whether or not command execution is completed.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -211,6 +175,12 @@ extends <a href=Command.html>Command</a>
                                 </div>
                                 <ul class="blockList">
                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.automaducks.pond.commands.Command">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.automaducks.pond.commands.Command</h3>
+                                            <code>getState</code></li>
+                                 
                                     <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
                                         <!--   -->
                                     </a>
@@ -239,31 +209,16 @@ extends <a href=Command.html>Command</a>
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="when(Function)">
+                                <a id="getShouldStart()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>when</h4>
-                                        <pre class="methodSignature"> static <a href=DynamicCommand.DynamicCommandBuilder.html>DynamicCommand.DynamicCommandBuilder</a> <a href=DynamicCommand.html#when(Function)>when</a>(<a href=https://developer.android.com/reference/kotlin/java/util/function/Function.html>Function</a>&lt;<a href=CommandConditionBuilder.html>CommandConditionBuilder</a>, <a href=https://developer.android.com/reference/kotlin/java/util/function/Supplier.html>Supplier</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a>&gt;&gt; condition)</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getIsTriggered()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getIsTriggered</h4>
-                                        <pre class="methodSignature"> boolean <a href=DynamicCommand.html#getIsTriggered()>getIsTriggered</a>()</pre>
-                                        <div class="block"><p>Gets a value indicating whether or not command is supposed to execute based on its trigger condition.</p></div>
+                                        <h4>getShouldStart</h4>
+                                        <pre class="methodSignature"> boolean <a href=DynamicCommand.html#getShouldStart()>getShouldStart</a>()</pre>
+                                        <div class="block"><p>Gets a value indicating whether or not command is supposed to execute based on its start condition.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -284,16 +239,16 @@ extends <a href=Command.html>Command</a>
                                     </li>
                                 </ul>
                                 
-                                <a id="getIsCompleted()">
+                                <a id="getShouldStop()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getIsCompleted</h4>
-                                        <pre class="methodSignature"> boolean <a href=DynamicCommand.html#getIsCompleted()>getIsCompleted</a>()</pre>
-                                        <div class="block"><p>Gets a value indicating whether or not command is completed.</p></div>
+                                        <h4>getShouldStop</h4>
+                                        <pre class="methodSignature"> boolean <a href=DynamicCommand.html#getShouldStop()>getShouldStop</a>()</pre>
+                                        <div class="block"><p>Gets a value indicating whether or not command execution is completed.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
