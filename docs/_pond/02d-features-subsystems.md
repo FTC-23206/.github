@@ -32,7 +32,7 @@ Real Time Subsystems are subsystems that need to repeatedly execute actions or l
 `IRealTimeSubsystems` : extends `ISubsystem` but provides the `periodic` method to iterate actions within the subsystem. 
 
 ## Subsystem Hubs
-A SubsystemHub stores . Having a Subsystem Hub makes running periodic on Real Time Subsystems efficient and allows the access of multiple subsystems within a command.
+A SubsystemHub stores a list of subsystems. Having a Subsystem Hub makes running periodic on Real Time Subsystems efficient and allows the access of multiple subsystems within a command.
 
 `ISubsystemHub` : extends `IRealTimeSubsystem`. Contains the functions `add`, `findFirst`, and `remove`. The `add` function adds subsystems to the hub, the `findFirst` function returns the first subsystem in the hub that matches the given class type (throws an exception if none is found), and the `remove` function simply removes the subsystem from the hub.
 
