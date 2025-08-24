@@ -7,6 +7,9 @@ toc: true
 > **Skip this page** if you are using the 'Quick-Start Repository' setup method. The integration requirements are already taken care for you.
 {: .notice--primary}
 
+> **Work in Progress:** documentation for manual integration is still in progress. Use the [Pond-Starter](https://github.com/FTC-23206/automaducks-pond-starter){:target="_blank" rel="noopener"} repository for cloning or reference.
+{: .notice--warning}
+
 ## Requirements
 
 Since Pond does not take a dependency on FTC SDK types and versions, these are required steps for teams looking to leverage all the functionality in the library.
@@ -131,7 +134,3 @@ public class TelemetryLogger extends TelemetryLoggerBase implements ITelemetryLo
     }
 }
 ```
-
-## Advance Usage
-
-See Pond Quick-Start [Team Code](https://github.com/FTC-23206/automaducks-pond-starter/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode){:target="_blank" rel="noopener"} for a more advanced example.
