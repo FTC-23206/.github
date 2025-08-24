@@ -156,6 +156,53 @@ The `Chassis` subsection holds all the configuration values for your drive train
 ## Sample Subsystems
 
 ### Mecanum Drive
+The constructor uses the hardware map accessor to get the motors, apply their configurations, and store their references within the class
+```java
+public class MecanumDrive extends SubsystemBase implements IDrivetrain {
+   
+    private final DcMotor frontLeft;
+    private final DcMotor rearLeft;
+    private final DcMotor frontRight;
+    private final DcMotor rearRight;
+
+    private final Pose2D targetPower = new Pose2D();
+
+    public MecanumDrive(HardwareMapAccessor hardwareMap, ITelemetryLogger logger) {
+
+        super(logger);
+
+        this.frontLeft = hardwareMap.getAndConfigureMotor(Configuration.Chassis.MotorFrontLeft);
+        this.frontRight = hardwareMap.getAndConfigureMotor(Configuration.Chassis.MotorFrontRight);
+        this.rearLeft = hardwareMap.getAndConfigureMotor(Configuration.Chassis.MotorRearLeft);
+        this.rearRight = hardwareMap.getAndConfigureMotor(Configuration.Chassis.MotorRearRight);
+    }
+```
+MecanumDrive contains two other methods `setPower` and `periodic`, the `setPower` method stores the new target power and logs it:
+```java
+ @Override
+    public void setPower(Pose2D power) {
+
+        this.logger.logDebug(getLogTag(), "TargetPower=%s", power);
+
+        this.targetPower.copyFrom(power);
+    }
+```
+Once the target power is stored, the `periodic` method calculates the power for each wheel, and applies it in the robot's processing cycle:
+```java
+@Override
+    public void periodic() {
+
+        MecanumWheelKinematicsData<Double> wheelsData = MecanumInverseKinematics.calculate(this.targetPower);
+
+        this.frontLeft.setPower(wheelsData.frontLeft);
+        this.frontRight.setPower(wheelsData.frontRight);
+        this.rearLeft.setPower(wheelsData.rearLeft);
+        this.rearRight.setPower(wheelsData.rearRight);
+
+        logger.logDebug(getLogTag(),"Mecanum Power: %s", wheelsData);
+    }
+```
+This method makes use of the `MecanumInverseKinematics` class to calculate the power given to each wheel.
 
 ### Dead Wheels Localizer
 
