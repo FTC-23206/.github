@@ -8,9 +8,6 @@ toc: true
 
 This page you guide you step-by-step through the Pond starter classes, while explaining their basic functionality.
 
-> Remember, **Pond** assists in writing high-performance robot code by making sure that all processing happens in the "periodic" method of Commands and Subsystem. For this to work correctly, you should never block the execution in your robot code (either by having infinite loops or calling *sleep* method).
-{: .notice--warning}
-
 ## Sample Operation Drive
 
 > File: OperationDrive
@@ -159,6 +156,9 @@ The `Chassis` subsection holds all the configuration values for your drive train
 
 ### Mecanum Drive
 
+> File: subsystems/MecanumDrive
+{: .notice}
+
 The constructor uses the hardware map accessor to get the motors, apply their configurations, and store their references within the class
 
 ```java
@@ -213,7 +213,15 @@ Once the target power is stored, the `periodic` method calculates the power for 
 
 This method makes use of the `MecanumInverseKinematics` class to calculate the power given to each wheel.
 
+> Remember, **Pond** assists in writing high-performance robot code by making sure that all processing happens in the "periodic" method of Commands and Subsystem. For this to work correctly, you should never block the execution in your robot code (either by having infinite loops or calling *sleep* method).
+{: .notice--warning}
+
 ### Dead Wheels Localizer
+
+> File: subsystems/DeadWheelsLocalizer
+{: .notice}
+
+
 `DeadWheelLocalizer` is a sample subsystem intended on providing a localization of the robot based on the encoded dead wheels of a robot. It is also a real time subsystem since it implements the `ILocalizer` interface. This example relies on 3 dead wheels (left, right, and center), and makes use of the `DeadWheelsKinematics` class to get the positions of our dead wheels on the field.
 
 The constructor, similar to the `MecanumDrive` subsystem, uses the `HardwareMapAccessor` to get the encoders of our dead wheels and set them to the member variables. It also uses the setMode method to reset the encoders. You can also see below how the new DeadWheelsKinematics instance uses the dead wheels defined in the configuration for the chassis.
