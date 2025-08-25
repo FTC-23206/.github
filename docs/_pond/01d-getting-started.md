@@ -4,6 +4,11 @@ permalink: /pond/getting-started
 toc: true
 ---
 
+> **Trying it out is simple and doesn't interfere with your robot code**. If you have a mecanum chassis, just fork or clone the starter repository, update configuration values for your motor names in code and give it a go! All the code you see here is already present on the started repository. 
+>
+> Instructions can be found on the [Setup](/pond/setup) guide.
+{: .notice--info}
+
 ## Introduction
 
 This page you guide you step-by-step through the Pond starter classes, while explaining their basic functionality.
@@ -39,6 +44,9 @@ Creates a `HardwareMapAccessor` (See [Pond Integration]) and then add the robot 
 ```
 
 Once the subsystems are added, they are ready to be operated. Since no movement is allowed until the Drive Operation starts, commands are only added on the `onStart` method.
+
+> If you robot doesn't have dead wheels and an arm, just go ahead and delete the initialization and movement code.
+{: .notice}
 
 ### onStart
 
