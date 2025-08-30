@@ -339,7 +339,7 @@ The onStart() method defines the robot’s initial pose and sets up a trajectory
     }
 ```
 
-The onPeriodic() method runs continuously during autonomous, similar to FTC’s loop(). It can be used for logging, sensor checks, or updating subsystems. Currently, it does nothing.
+The onPeriodic() method runs continuously during autonomous, similar to FTC’s loop(). It can be used for logging, sensor checks, or updating subsystems.
 
 ```java
 @Override
@@ -348,7 +348,7 @@ The onPeriodic() method runs continuously during autonomous, similar to FTC’s 
     }
 ```
 
-The onStop() method runs once when autonomous ends. It allows for cleanup, but is currently empty.
+The onStop() method runs once when autonomous ends. It allows for cleanup.
 
 ```java
 @Override
