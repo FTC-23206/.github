@@ -300,7 +300,62 @@ Coming soon!
 
 ## Sample Autonomous
 
-Coming soon!
+`OperationAutonomous` is an Autonomous OpMode that defines how the robot behaves during the autonomous portion of an FTC match. It extends the `OperationBase class`, which provides lifecycle methods (`onInit`, `onStart`, `onPeriodic`, `onStop`).
+
+This OpMode makes use of several subsystems (`DeadWheelsLocalizer`, `ArmController`, `MecanumDrive`, and `HolonomicController`) and leverages Road Runner to generate and follow trajectories.
+
+```java
+@Override
+    protected void onInit() {
+
+        HardwareMapAccessor hardwareMapAccessor = new HardwareMapAccessor(hardwareMap);
+
+        robotSubsystems.add(new DeadWheelsLocalizer(hardwareMapAccessor, logger));
+        robotSubsystems.add(new ArmController(hardwareMapAccessor, logger));
+        robotSubsystems.add(new MecanumDrive(hardwareMapAccessor, logger));
+
+        // Auto Only
+        robotSubsystems.add(new HolonomicController(Configuration.Autonomous.HolonomicConfig, logger));
+    }
+```
+
+The onStart() method defines the robot’s initial pose and sets up a trajectory to follow.
+
+```java
+ @Override
+    protected void onStart() {
+
+        Pose2D initialPose = new Pose2D(0, 0, 0);
+        FollowTrajectoryCommandParams trajectoryParams = Configuration.Autonomous.TrajectoryParams;
+
+        ITimedTrajectory trajectory = RoadRunner.createTrajectory(initialPose, b -> b
+            .lineToX(600)
+            .build());
+
+        Command command = Commands.followTrajectory("Test", trajectory, trajectoryParams, robotSubsystems);
+
+        commandScheduler.runOnce(command);
+
+    }
+```
+
+The onPeriodic() method runs continuously during autonomous, similar to FTC’s loop(). It can be used for logging, sensor checks, or updating subsystems. Currently, it does nothing.
+
+```java
+@Override
+    protected void onPeriodic() {
+
+    }
+```
+
+The onStop() method runs once when autonomous ends. It allows for cleanup, but is currently empty.
+
+```java
+@Override
+    protected void onStop() {
+
+    }
+```
 
 [Pond Integration]: </pond/integration> "Pond Integration"
 [FTC Dashboard]: <https://acmerobotics.github.io/ftc-dashboard/> "FTC Dashboard"
