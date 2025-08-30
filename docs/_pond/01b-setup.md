@@ -88,7 +88,7 @@ Now learn how to run and modify the code on the [Getting Started](/pond/getting-
         implementation project(':FtcRobotController')
 
         // Pond Library Reference
-        implementation 'com.automaducks:pond:0.9.0'
+        implementation 'com.automaducks:pond:0.9.1'
     }
     ```
 
