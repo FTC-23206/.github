@@ -138,37 +138,67 @@ public class <span class="typeNameLabel"><a href=HolonomicControllerParams.html>
                                         
                                         <tr class="altColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#posGainX>posGainX</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#MaximumMeasuredTranslationalVelocity>MaximumMeasuredTranslationalVelocity</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#posGainY>posGainY</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#MaximumMeasuredAngularVelocity>MaximumMeasuredAngularVelocity</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#posGainW>posGainW</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kpX>kpX</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#speedGainX>speedGainX</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kpY>kpY</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#speedGainY>speedGainY</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kpW>kpW</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>public  double</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#speedGainW>speedGainW</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kdX>kdX</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public  double</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kdY>kdY</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public  double</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kdW>kdW</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public  double</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kfX>kfX</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public  double</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kfY>kfY</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public  double</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HolonomicControllerParams.html#kfW>kfW</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -198,7 +228,7 @@ public class <span class="typeNameLabel"><a href=HolonomicControllerParams.html>
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HolonomicControllerParams(double,double,double,double,double,double)">HolonomicControllerParams</a></span>(double posGainX, double posGainY, double posGainW, double speedGainX, double speedGainY, double speedGainW)</code></th>
+                                                        href="#HolonomicControllerParams(double,double,double,double,double,double,double,double,double,double,double)">HolonomicControllerParams</a></span>(double maxTranslationalVelocity, double maxAngularVelocity, double kpX, double kpY, double kpW, double kdX, double kdY, double kdW, double kfX, double kfY, double kfW)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -229,11 +259,11 @@ public class <span class="typeNameLabel"><a href=HolonomicControllerParams.html>
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="HolonomicControllerParams(double,double,double,double,double,double)"></a>
+                                <a name="HolonomicControllerParams(double,double,double,double,double,double,double,double,double,double,double)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HolonomicControllerParams</h4>
-                                        <pre>HolonomicControllerParams(double posGainX, double posGainY, double posGainW, double speedGainX, double speedGainY, double speedGainW)</pre>
+                                        <pre>HolonomicControllerParams(double maxTranslationalVelocity, double maxAngularVelocity, double kpX, double kpY, double kpW, double kdX, double kdY, double kdW, double kfX, double kfY, double kfW)</pre>
                                         <div class="block"></div>
                                         
                                     </li>

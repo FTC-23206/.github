@@ -165,8 +165,20 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#name>name</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
                                             <td class="colFirst"><code>private  <a href=Command.State.html>Command.State</a></code></td>
                                             <th class="colSecond" scope="row"><code><a href=Command.html#state>state</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>private  boolean</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#isCompleted>isCompleted</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -202,6 +214,14 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#getName()>getName</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the current command name.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code><a href=Command.State.html>Command.State</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Command.html#getState()>getState</a>() </code>
@@ -209,20 +229,52 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                             <td class="colLast">Gets the current command state.</td>
                                         </tr>
                                         
-                                        <tr id="i1" class="rowColor">
+                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>boolean</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#getShouldStart()>getShouldStart</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#getIsCompleted()>getIsCompleted</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets a value indicating whether or not command execution is completed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#setIsCompleted(boolean)>setIsCompleted</a>(boolean isCompleted) </code>
+                                            </th>
+                                            <td class="colLast">Set the command completed state.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#getIsRunnable()>getIsRunnable</a>() </code>
                                             </th>
                                             <td class="colLast">Gets a value indicating whether or not command is supposed to execute based on its start condition.</td>
                                         </tr>
                                         
-                                        <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>boolean</code>
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=Command.html#getShouldStop()>getShouldStop</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#start()>start</a>() </code>
                                             </th>
-                                            <td class="colLast">Gets a value indicating whether or not command execution is completed.</td>
+                                            <td class="colLast">Starts the command execution.This allows for commands to execute any initialization code.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#stop()>stop</a>() </code>
+                                            </th>
+                                            <td class="colLast">Stops the command execution.This allows for commands to execute any cleanup code.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Command.html#periodic()>periodic</a>() </code>
+                                            </th>
+                                            <td class="colLast">Command periodic code while the command is running.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -258,6 +310,21 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                             </a>
                                 <h3>Method Detail</h3>
                                 
+                                <a id="getName()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getName</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=Command.html#getName()>getName</a>()</pre>
+                                        <div class="block"><p>Gets the current command name.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="getState()">
                                     <!--   -->
                                 </a>
@@ -273,31 +340,100 @@ public abstract class <span class="typeNameLabel"><a href=Command.html>Command</
                                     </li>
                                 </ul>
                                 
-                                <a id="getShouldStart()">
+                                <a id="getIsCompleted()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getShouldStart</h4>
-                                        <pre class="methodSignature"> boolean <a href=Command.html#getShouldStart()>getShouldStart</a>()</pre>
+                                        <h4>getIsCompleted</h4>
+                                        <pre class="methodSignature"> boolean <a href=Command.html#getIsCompleted()>getIsCompleted</a>()</pre>
+                                        <div class="block"><p>Gets a value indicating whether or not command execution is completed.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setIsCompleted(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setIsCompleted</h4>
+                                        <pre class="methodSignature"> void <a href=Command.html#setIsCompleted(boolean)>setIsCompleted</a>(boolean isCompleted)</pre>
+                                        <div class="block"><p>Set the command completed state.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>isCompleted</code> - a boolean value indicating whether or not the command is completed.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getIsRunnable()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getIsRunnable</h4>
+                                        <pre class="methodSignature"> boolean <a href=Command.html#getIsRunnable()>getIsRunnable</a>()</pre>
                                         <div class="block"><p>Gets a value indicating whether or not command is supposed to execute based on its start condition.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="getShouldStop()">
+                                <a id="start()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>start</h4>
+                                        <pre class="methodSignature"> final void <a href=Command.html#start()>start</a>()</pre>
+                                        <div class="block"><p>Starts the command execution.This allows for commands to execute any initialization code.</p>This method is automatically called by the CommandScheduler.</div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="stop()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>stop</h4>
+                                        <pre class="methodSignature"> final void <a href=Command.html#stop()>stop</a>()</pre>
+                                        <div class="block"><p>Stops the command execution.This allows for commands to execute any cleanup code.</p>This method is automatically called by the CommandScheduler.</div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="periodic()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getShouldStop</h4>
-                                        <pre class="methodSignature"> boolean <a href=Command.html#getShouldStop()>getShouldStop</a>()</pre>
-                                        <div class="block"><p>Gets a value indicating whether or not command execution is completed.</p></div>
+                                        <h4>periodic</h4>
+                                        <pre class="methodSignature"> abstract void <a href=Command.html#periodic()>periodic</a>()</pre>
+                                        <div class="block"><p>Command periodic code while the command is running.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

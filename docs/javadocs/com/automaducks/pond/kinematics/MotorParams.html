@@ -179,19 +179,37 @@ public class <span class="typeNameLabel"><a href=MotorParams.html>MotorParams</a
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>public  boolean</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=MotorParams.html#invertMotor>invertMotor</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=MotorParams.html#invert>invert</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>public  boolean</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MotorParams.html#disable>disable</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
                                             <td class="colFirst"><code>public  <a href=MotorParams.ZeroPowerBehavior.html>MotorParams.ZeroPowerBehavior</a></code></td>
                                             <th class="colSecond" scope="row"><code><a href=MotorParams.html#zeroPowerBehavior>zeroPowerBehavior</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr class="rowColor">
+                                        <tr class="altColor">
                                             <td class="colFirst"><code>public  <a href=MotorParams.Mode.html>MotorParams.Mode</a></code></td>
                                             <th class="colSecond" scope="row"><code><a href=MotorParams.html#mode>mode</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public  <a href=../control/PidParamsSimple.html>PidParamsSimple</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MotorParams.html#positionPid>positionPid</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public  <a href=../control/PidParamsSimple.html>PidParamsSimple</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=MotorParams.html#velocityPid>velocityPid</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -221,8 +239,14 @@ public class <span class="typeNameLabel"><a href=MotorParams.html>MotorParams</a
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#MotorParams(String,MotorParams.Mode,boolean)">MotorParams</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invertMotor)</code></th>
-                                                <td class="colLast"></td>
+                                                        href="#MotorParams(String,MotorParams.Mode,boolean)">MotorParams</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invert)</code></th>
+                                                <td class="colLast">Constructs a new instance of the Motor Params class.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#MotorParams(String,MotorParams.Mode,boolean,PidParamsSimple,PidParamsSimple)">MotorParams</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invert, <a href=../control/PidParamsSimple.html>PidParamsSimple</a> positionPid, <a href=../control/PidParamsSimple.html>PidParamsSimple</a> velocityPid)</code></th>
+                                                <td class="colLast">Constructs a new instance of the Motor Params class.</td>
                                             </tr>
                                         
 
@@ -256,8 +280,60 @@ public class <span class="typeNameLabel"><a href=MotorParams.html>MotorParams</a
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>MotorParams</h4>
-                                        <pre>MotorParams(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invertMotor)</pre>
-                                        <div class="block"></div>
+                                        <pre>MotorParams(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invert)</pre>
+                                        <div class="block">Constructs a new instance of the Motor Params class.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>name</code> - Motor name</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - Motor run mode</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>invert</code> - true if the motor needs to be inverted, false otherwise</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="MotorParams(String,MotorParams.Mode,boolean,PidParamsSimple,PidParamsSimple)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>MotorParams</h4>
+                                        <pre>MotorParams(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=MotorParams.Mode.html>MotorParams.Mode</a> mode, boolean invert, <a href=../control/PidParamsSimple.html>PidParamsSimple</a> positionPid, <a href=../control/PidParamsSimple.html>PidParamsSimple</a> velocityPid)</pre>
+                                        <div class="block">Constructs a new instance of the Motor Params class.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>name</code> - Motor name</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mode</code> - Motor run mode</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>invert</code> - true if the motor needs to be inverted, false otherwise</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>positionPid</code> - position custom PID</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>velocityPid</code> - velocity custom PID</dd>
+                                            
+                                            
+                                        </dl>
                                         
                                     </li>
                                 </ul>

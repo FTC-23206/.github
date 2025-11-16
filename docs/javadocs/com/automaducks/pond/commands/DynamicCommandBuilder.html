@@ -108,7 +108,7 @@ var pathtoroot = "../../../../";
                     <pre class="wrap-overflow">
 
 public class <span class="typeNameLabel"><a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a></span>
-extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=DynamicCommand.html>DynamicCommand</a>&gt;
+extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=Command.html>Command</a>&gt;
                     </pre>
                     <div class="block"></div>
                 </li>
@@ -149,6 +149,12 @@ extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=DynamicCommand
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>public  <a href=Command.html>Command</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=DynamicCommandBuilder.html#subcommand>subcommand</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
                                             <td class="colFirst"><code>public  <a href=https://developer.android.com/reference/kotlin/java/util/function/Supplier.html>Supplier</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a>&gt;</code></td>
                                             <th class="colSecond" scope="row"><code><a href=DynamicCommandBuilder.html#stopCondition>stopCondition</a></code></th>
                                             <td class="colLast"></td>
@@ -212,13 +218,21 @@ extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=DynamicCommand
                                         <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code><a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a></code>
                                             </td>
+                                            <th class="colSecond" scope="row"><code><a href=DynamicCommandBuilder.html#execute(Command)>execute</a>(<a href=Command.html>Command</a> subCommand) </code>
+                                            </th>
+                                            <td class="colLast">Sets the command lambda.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a></code>
+                                            </td>
                                             <th class="colSecond" scope="row"><code><a href=DynamicCommandBuilder.html#until(Supplier)>until</a>(<a href=https://developer.android.com/reference/kotlin/java/util/function/Supplier.html>Supplier</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a>&gt; stopCondition) </code>
                                             </th>
                                             <td class="colLast">Sets the command stop condition.</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
-                                            <td class="colFirst"><code><a href=DynamicCommand.html>DynamicCommand</a></code>
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code><a href=Command.html>Command</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=DynamicCommandBuilder.html#build(String)>build</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> commandName) </code>
                                             </th>
@@ -336,6 +350,30 @@ extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=DynamicCommand
                                     </li>
                                 </ul>
                                 
+                                <a id="execute(Command)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>execute</h4>
+                                        <pre class="methodSignature"> <a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a> <a href=DynamicCommandBuilder.html#execute(Command)>execute</a>(<a href=Command.html>Command</a> subCommand)</pre>
+                                        <div class="block"><p>Sets the command lambda.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>subCommand</code> - subcommand to run.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="until(Supplier)">
                                     <!--   -->
                                 </a>
@@ -368,7 +406,7 @@ extends <a href=CommandBuilder.html>CommandBuilder</a>&lt;<a href=DynamicCommand
                                           >
                                     <li class="blockList">
                                         <h4>build</h4>
-                                        <pre class="methodSignature"> <a href=DynamicCommand.html>DynamicCommand</a> <a href=DynamicCommandBuilder.html#build(String)>build</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> commandName)</pre>
+                                        <pre class="methodSignature"> <a href=Command.html>Command</a> <a href=DynamicCommandBuilder.html#build(String)>build</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> commandName)</pre>
                                         <div class="block"><p>Builds the command.</p></div>
                                         
                                         <dl>

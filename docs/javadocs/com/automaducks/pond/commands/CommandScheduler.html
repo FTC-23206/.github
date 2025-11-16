@@ -141,7 +141,7 @@ public class <span class="typeNameLabel"><a href=CommandScheduler.html>CommandSc
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#CommandScheduler(ITelemetryLogger)">CommandScheduler</a></span>(<a href=../utility/ITelemetryLogger.html>ITelemetryLogger</a> logger)</code></th>
+                                                        href="#CommandScheduler(ILogger)">CommandScheduler</a></span>(<a href=../utility/ILogger.html>ILogger</a> logger)</code></th>
                                                 <td class="colLast">Constructs a new instance of the command scheduler.</td>
                                             </tr>
                                         
@@ -195,14 +195,6 @@ public class <span class="typeNameLabel"><a href=CommandScheduler.html>CommandSc
                                         <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>void</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=CommandScheduler.html#runOnce(Function)>runOnce</a>(<a href=https://developer.android.com/reference/kotlin/java/util/function/Function.html>Function</a>&lt;<a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a>, <a href=DynamicCommand.html>DynamicCommand</a>&gt; dynamicBuilder) </code>
-                                            </th>
-                                            <td class="colLast">Adds a single run dynamic command to the scheduler.</td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
-                                            <td class="colFirst"><code>void</code>
-                                            </td>
                                             <th class="colSecond" scope="row"><code><a href=CommandScheduler.html#periodic()>periodic</a>() </code>
                                             </th>
                                             <td class="colLast">Periodic execution of commands.</td>
@@ -239,11 +231,11 @@ public class <span class="typeNameLabel"><a href=CommandScheduler.html>CommandSc
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="CommandScheduler(ITelemetryLogger)"></a>
+                                <a name="CommandScheduler(ILogger)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>CommandScheduler</h4>
-                                        <pre>CommandScheduler(<a href=../utility/ITelemetryLogger.html>ITelemetryLogger</a> logger)</pre>
+                                        <pre>CommandScheduler(<a href=../utility/ILogger.html>ILogger</a> logger)</pre>
                                         <div class="block">Constructs a new instance of the command scheduler.</div>
                                         
                                     </li>
@@ -302,30 +294,6 @@ public class <span class="typeNameLabel"><a href=CommandScheduler.html>CommandSc
                                             
                                             
                                             <dd><code>command</code> - a command which runs only once once the trigger condition is true.</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="runOnce(Function)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>runOnce</h4>
-                                        <pre class="methodSignature"> void <a href=CommandScheduler.html#runOnce(Function)>runOnce</a>(<a href=https://developer.android.com/reference/kotlin/java/util/function/Function.html>Function</a>&lt;<a href=DynamicCommandBuilder.html>DynamicCommandBuilder</a>, <a href=DynamicCommand.html>DynamicCommand</a>&gt; dynamicBuilder)</pre>
-                                        <div class="block"><p>Adds a single run dynamic command to the scheduler.</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>dynamicBuilder</code> - a command which runs only once once the trigger condition is true.</dd>
                                             
                                             
                                         </dl>

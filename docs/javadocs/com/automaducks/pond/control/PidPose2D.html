@@ -141,7 +141,7 @@ public class <span class="typeNameLabel"><a href=PidPose2D.html>PidPose2D</a></s
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#PidPose2D(String,PidParams,PidParams,PidParams,ITelemetryLogger)">PidPose2D</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=PidParams.html>PidParams</a> paramsX, <a href=PidParams.html>PidParams</a> paramsY, <a href=PidParams.html>PidParams</a> paramsW, <a href=../utility/ITelemetryLogger.html>ITelemetryLogger</a> telemetry)</code></th>
+                                                        href="#PidPose2D(String,PidParams,PidParams,PidParams,ILogger)">PidPose2D</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=PidParams.html>PidParams</a> paramsX, <a href=PidParams.html>PidParams</a> paramsY, <a href=PidParams.html>PidParams</a> paramsW, <a href=../utility/ILogger.html>ILogger</a> telemetry)</code></th>
                                                 <td class="colLast">Constructs a new instance of the VectorOrientationPid class.</td>
                                             </tr>
                                         
@@ -184,6 +184,14 @@ public class <span class="typeNameLabel"><a href=PidPose2D.html>PidPose2D</a></s
                                             <td class="colLast">Gets the actuation output.</td>
                                         </tr>
                                         
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PidPose2D.html#reset()>reset</a>() </code>
+                                            </th>
+                                            <td class="colLast">Resets the PID state.</td>
+                                        </tr>
+                                        
                                         </tbody>
                                     </table>
                                 </div>
@@ -215,11 +223,11 @@ public class <span class="typeNameLabel"><a href=PidPose2D.html>PidPose2D</a></s
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="PidPose2D(String,PidParams,PidParams,PidParams,ITelemetryLogger)"></a>
+                                <a name="PidPose2D(String,PidParams,PidParams,PidParams,ILogger)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>PidPose2D</h4>
-                                        <pre>PidPose2D(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=PidParams.html>PidParams</a> paramsX, <a href=PidParams.html>PidParams</a> paramsY, <a href=PidParams.html>PidParams</a> paramsW, <a href=../utility/ITelemetryLogger.html>ITelemetryLogger</a> telemetry)</pre>
+                                        <pre>PidPose2D(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> name, <a href=PidParams.html>PidParams</a> paramsX, <a href=PidParams.html>PidParams</a> paramsY, <a href=PidParams.html>PidParams</a> paramsW, <a href=../utility/ILogger.html>ILogger</a> telemetry)</pre>
                                         <div class="block">Constructs a new instance of the VectorOrientationPid class.</div>
                                         
                                         <dl>
@@ -267,7 +275,7 @@ public class <span class="typeNameLabel"><a href=PidPose2D.html>PidPose2D</a></s
                                     <!--   -->
                                 </a>
                                 <ul class=
-                                              "blockListLast"
+                                              "blockList"
                                           >
                                     <li class="blockList">
                                         <h4>calculateOutput</h4>
@@ -286,6 +294,21 @@ public class <span class="typeNameLabel"><a href=PidPose2D.html>PidPose2D</a></s
                                             
                                             
                                         </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="reset()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>reset</h4>
+                                        <pre class="methodSignature"> void <a href=PidPose2D.html#reset()>reset</a>()</pre>
+                                        <div class="block"><p>Resets the PID state.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

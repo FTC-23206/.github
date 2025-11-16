@@ -181,6 +181,14 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                         </tr>
                                         
                                         <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=Duration.html>Duration</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Duration.html#ofSeconds(double)>ofSeconds</a>(double seconds) </code>
+                                            </th>
+                                            <td class="colLast">Returns a new Duration object based on amount of fractional seconds.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
                                             <td class="colFirst"><code>long</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Duration.html#toNanos()>toNanos</a>() </code>
@@ -188,7 +196,7 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                             <td class="colLast">Returns the amount of nanoseconds in this duration.</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
+                                        <tr id="i5" class="rowColor">
                                             <td class="colFirst"><code>int</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Duration.html#toMillis()>toMillis</a>() </code>
@@ -196,7 +204,7 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                             <td class="colLast">Returns the amount of milliseconds in this duration.</td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
+                                        <tr id="i6" class="altColor">
                                             <td class="colFirst"><code>double</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Duration.html#toMillisFractional()>toMillisFractional</a>() </code>
@@ -204,12 +212,28 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                             <td class="colLast">Returns the amount of milliseconds in this duration.</td>
                                         </tr>
                                         
-                                        <tr id="i6" class="altColor">
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>double</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Duration.html#toSeconds()>toSeconds</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the amount of seconds in this duration.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
                                             <td class="colFirst"><code>int</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=Duration.html#compareTo(Duration)>compareTo</a>(<a href=Duration.html>Duration</a> duration) </code>
                                             </th>
                                             <td class="colLast">Compares 2 duration objects.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Duration.html#toString()>toString</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns a String representation of this object.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -323,6 +347,30 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                     </li>
                                 </ul>
                                 
+                                <a id="ofSeconds(double)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>ofSeconds</h4>
+                                        <pre class="methodSignature"> static <a href=Duration.html>Duration</a> <a href=Duration.html#ofSeconds(double)>ofSeconds</a>(double seconds)</pre>
+                                        <div class="block"><p>Returns a new Duration object based on amount of fractional seconds.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>seconds</code> - duration in seconds.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="toNanos()">
                                     <!--   -->
                                 </a>
@@ -368,11 +416,26 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                     </li>
                                 </ul>
                                 
+                                <a id="toSeconds()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toSeconds</h4>
+                                        <pre class="methodSignature"> double <a href=Duration.html#toSeconds()>toSeconds</a>()</pre>
+                                        <div class="block"><p>Returns the amount of seconds in this duration.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="compareTo(Duration)">
                                     <!--   -->
                                 </a>
                                 <ul class=
-                                              "blockListLast"
+                                              "blockList"
                                           >
                                     <li class="blockList">
                                         <h4>compareTo</h4>
@@ -387,6 +450,21 @@ public class <span class="typeNameLabel"><a href=Duration.html>Duration</a></spa
                                             
                                             
                                         </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="toString()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toString</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=Duration.html#toString()>toString</a>()</pre>
+                                        <div class="block"><p>Returns a String representation of this object.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
