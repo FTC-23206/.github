@@ -13,7 +13,7 @@ Commands are independent pieces of code that execute based on a give condition a
 | Part                | Description                                                                                 |
 | :------------------ | :------------------------------------------------------------------------------------------ |
 | **Start Condition** | Condition that causes the command to run. It could be a button being pressed or always true |
-| **Periodic**        | Code that run on every scheduling cycle while your command is active.                       |
+| **Periodic**        | Code that run on every scheduling cycle while your command is running.                      |
 | **Stop Condition**  | Condition that causes the command to stop.                                                  |
 
 This is state machine diagram of a command:
@@ -23,23 +23,23 @@ This is state machine diagram of a command:
 stateDiagram-v2
     direction LR
     [*] --> IDLE
-    IDLE --> ACTIVE:[ShouldStart = True]
-    ACTIVE --> ACTIVE
-    ACTIVE --> IDLE: [ShouldStop = True]
-    ACTIVE --> [*]: [ShouldStop = True <br> and RunOnce]
+    IDLE --> RUNNING:[getIsRunnable() = True]
+    RUNNING --> RUNNING
+    RUNNING --> IDLE: [getIsCompleted() = True]
+    RUNNING --> [*]: [getIsCompleted() = True <br> and RunOnce]
 </div>
 {% endraw %}
 
-1. A command starts at `Idle` state and once `ShouldStart` is true it enters the `Active` state.
-2. While in `Active`, it will repeatedly call the `Periodic` method, until `ShouldStop` returns true.
+1. A command starts at `Idle` state and once `getIsRunnable()` is true it enters the `Running` state.
+2. While in `Running`, it will repeatedly call the `periodic` method, until `getIsCompleted()` returns true.
 
 A very simple command could be defined as the following:
 
-* Always returns true on `ShouldStart`
-* Performs a single action on `Periodic`
-* Always returns true on `ShouldStop`
+* Always returns true on `getIsRunnable()`
+* Performs a single action on `periodic`
+* Always returns true on `getIsCompleted()`
 
-With the above, the command code on `Peridic` will execute when the command is scheduled.
+With the above, the command code on `periodic` will execute when the command is scheduled.
 
 ### Command Scheduling
 
@@ -62,25 +62,33 @@ With the `DynamicCommand` you can define your own command logic without having t
 
 ```java
 Command chassisMovement =
-    Commands.dynamic()
+    commandFactory.dynamic(
+        "JoystickCommand",
+        d -> d
         .when(CommandConditionBuilder::Always)
         .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
-        .build("JoystickCommand");
+    );
+
+commandScheduler.runPeriodically(chassisMovement);
 ```
 
 **Arm Movement**
 
 ```java
+// Arm Movement
 Command armMovement =
-    Commands.anyOf("ArmControl",
-        Commands.dynamic()
+    commandFactory.anyOf("ArmControl",
+        commandFactory.dynamic("RaiseArm",
+            d -> d
             .when(c -> c.buttonWasJustPressed(() -> gamepad1.a))
-            .execute(() -> armController.moveToAngle(Math.toRadians(90.0), 0.8))
-            .build("RaiseArm"),
-        Commands.dynamic()
+            .execute(() -> armController.moveToAngle(Math.toRadians(90.0), 0.8))),
+        commandFactory.dynamic("LowerArm",
+            d -> d
             .when(c -> c.buttonWasJustPressed(() -> gamepad1.b))
-            .execute(() -> armController.moveToAngle(Math.toRadians(0), 0.4))
-            .build("LowerArm"));
+            .execute(() -> armController.moveToAngle(Math.toRadians(0), 0.4)))
+    );
+
+commandScheduler.runPeriodically(armMovement);
 ```
 
 ### Grouping Commands
@@ -93,18 +101,16 @@ Executes the first command in the list which is ready to be started. Completes w
 
 ```java
 ExecutionCounter firstCounter = new ExecutionCounter();
-Command firstCommand = Commands.dynamic()
+Command firstCommand = commandFactory.dynamic("firstCommand", d -> d
     .when(() -> firstTriggered)
-    .execute(firstCounter::increment)
-    .build("firstCommand");
+    .execute(firstCounter::increment));
 
 ExecutionCounter secondCounter = new ExecutionCounter();
-Command secondCommand = Commands.dynamic()
+Command secondCommand = commandFactory.dynamic("secondCommand", d -> d
     .when(() -> secondTriggered)
-    .execute(secondCounter::increment)
-    .build("secondCommand");
+    .execute(secondCounter::increment));
 
-Command runAny = Commands.anyOf("anyCommand", firstCommand, secondCommand);
+Command runAny = commandFactory.anyOf("anyCommand", firstCommand, secondCommand);
 ```
 
 #### Parallel Command
@@ -112,10 +118,15 @@ Command runAny = Commands.anyOf("anyCommand", firstCommand, secondCommand);
 Executes all the commands in the list in parallel. Completes when all commands are completed.
 
 ```java
-Command parallelCommand = Commands.parallel(
+ExecutionCounter counter = new ExecutionCounter();
+
+Command parallelCommand = commandFactory.parallel(
     "Parallel Command",
-    new TestCommand(() -> { counter.increment(); return true; }),
-    new TestCommand(() -> { counter.increment(); return true; }));
+    new TestCommand(this.logger, () -> { counter.increment(); return true; }),
+    new TestCommand(this.logger, () -> { counter.increment(); return true; }));
+
+this.scheduler.runOnce(parallelCommand);
+
 ```
 
 #### Sequential Command
@@ -135,13 +146,14 @@ FollowTrajectoryCommand makes the robot drive along a planned path and stop once
 
 ```java
 Pose2D initialPose = new Pose2D(0, 0, 0);
-FollowTrajectoryCommandParams trajectoryParams = org.firstinspires.ftc.teamcode.Configuration.Autonomous.TrajectoryParams;
+CommandFactory commandFactory = new CommandFactory(this.robotSubsystems, this.logger);
+FollowTrajectoryCommandParams trajectoryParams = Configuration.Autonomous.TrajectoryParams;
 
-ITimedTrajectory trajectory = org.firstinspires.ftc.teamcode.roadrunner.RoadRunner.createTrajectory(initialPose, b -> b
-    .lineToX(600)
+ITimedTrajectory trajectory = RoadRunner.createTrajectory(initialPose, b -> b
+    .lineToX(60)
     .build());
 
-Command command = Commands.followTrajectory("Test", trajectory, trajectoryParams, robotSubsystems);
+Command command = commandFactory.followTrajectory("Test", trajectory, trajectoryParams);
 
 commandScheduler.runOnce(command);
 ```

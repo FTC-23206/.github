@@ -33,11 +33,16 @@ The library also provides conditional helpers which makes it easy to check chang
 Example:
 
 ```java
-// Moves the arm only when the button A was just pressed
-commandScheduler.runPeriodically(Commands.dynamic()
-    .when(CommandConditionBuilder::Always)
-    .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
-    .build("JoystickCommand"));
+        // Chassis movement
+        Command chassisMovement =
+            commandFactory.dynamic(
+                "JoystickCommand",
+                d -> d
+                .when(CommandConditionBuilder::Always)
+                .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
+            );
+
+        commandScheduler.runPeriodically(chassisMovement);
 ```
 
 ## Subsystems
@@ -55,11 +60,11 @@ Example:
 @Override
 protected void onInit() {
 
-    HardwareMapAccessor hardwareMapAccessor = new HardwareMapAccessor(hardwareMap);
+    HardwareMapAccessor hardwareMapAccessor = new HardwareMapAccessor(hardwareMap, logger);
 
-    robotSubsystems.addIfNotNull(new ArmController(hardwareMapAccessor, logger));
-    robotSubsystems.addIfNotNull(new MecanumDrive(hardwareMapAccessor, logger));
-    robotSubsystems.addIfNotNull(new DeadWheelsLocalizer(hardwareMapAccessor, logger));
+    robotSubsystems.add(new DeadWheelsLocalizer(hardwareMapAccessor, logger));
+    robotSubsystems.add(new ArmController(hardwareMapAccessor, logger));
+    robotSubsystems.add(new MecanumDrive(hardwareMapAccessor, logger));
 }
 ```
 

@@ -62,26 +62,27 @@ Creates the required commands to operate the robot during drive operation.
 
         // Chassis movement
         Command chassisMovement =
-            Commands.dynamic()
+            commandFactory.dynamic(
+                "JoystickCommand",
+                d -> d
                 .when(CommandConditionBuilder::Always)
                 .execute(() -> drivetrain.setPower(new Pose2D(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x)))
-                .build("JoystickCommand");
+            );
 
         commandScheduler.runPeriodically(chassisMovement);
 
         // Arm Movement
         Command armMovement =
-            Commands.anyOf("ArmControl",
-                Commands.dynamic()
+            commandFactory.anyOf("ArmControl",
+                commandFactory.dynamic("RaiseArm",
+                    d -> d
                     .when(c -> c.buttonWasJustPressed(() -> gamepad1.a))
-                    .execute(() -> armController.moveToAngle(Math.toRadians(90.0), 0.8))
-                    .build("RaiseArm"),
-                Commands.dynamic()
+                    .execute(() -> armController.moveToAngle(Math.toRadians(90.0), 0.8))),
+                commandFactory.dynamic("LowerArm",
+                    d -> d
                     .when(c -> c.buttonWasJustPressed(() -> gamepad1.b))
-                    .execute(() -> armController.moveToAngle(Math.toRadians(0), 0.4))
-                    .build("LowerArm"));
-
-        commandScheduler.runPeriodically(armMovement);
+                    .execute(() -> armController.moveToAngle(Math.toRadians(0), 0.4)))
+            );
     }
 ```
 

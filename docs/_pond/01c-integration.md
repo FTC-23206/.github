@@ -22,7 +22,7 @@ You need to initialize the *Command Scheduler* and the robot *Subsystem Hub* for
 public class MyOperation extends LinearOpMode {
 
     // Declare and initialize the member variables
-    private final ITelemetryLogger logger = new TelemetryLogger(telemetry);
+    private final ILogger logger = new Logger(telemetry);
     private final SubsystemHub robotSubsystems = new SubsystemHub(logger);
     private final CommandScheduler commandScheduler = new CommandScheduler(logger);
 
@@ -45,7 +45,7 @@ public class MyOperation extends LinearOpMode {
 
 ```
 
-### Implement ITelemetryLogger
+### Implement ILogger
 
 Pond makes use of different logging and telemetry capabilities to better help you understanding your robot code:
 
@@ -62,75 +62,63 @@ In order to enable these, Pond needs to be fed an implementation of ITelemetryLo
  */
 package org.firstinspires.ftc.samplecode.integration;
 
-import com.automaducks.pond.utility.ITelemetryLogger;
-import com.automaducks.pond.utility.TelemetryLoggerBase;
+import com.acmerobotics.dashboard.FtcDashboard;
+import com.acmerobotics.dashboard.telemetry.TelemetryPacket;
+import com.automaducks.pond.subsystems.HolonomicController;
+import com.automaducks.pond.utility.LoggerBase;
 import com.qualcomm.robotcore.util.RobotLog;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
 
 /**
  * Multi target logger: logs to DriverHub, LogCat and FTC Dashboard Graphs.
+ * <p>
+ * IMPORTANT: This file is not expected to be changed by teams.
  */
-public class TelemetryLogger extends TelemetryLoggerBase implements ITelemetryLogger {
+public class Logger extends LoggerBase {
 
     private final Telemetry telemetry;
+    private final FtcDashboard ftcDashboard = FtcDashboard.getInstance();
+    private TelemetryPacket ftcDashboardPacket = new TelemetryPacket();
 
     /**
      * Constructs a new telemetry logger.
      * @param telemetry the FTC SDK Telemetry reference.
      */
-    public TelemetryLogger(Telemetry telemetry) {
+    public Logger(Telemetry telemetry) {
 
         this.telemetry = telemetry;
+        this.populateGraphKeys(HolonomicController.getGraphKeys());
     }
 
-    /**
-     * Displays data on the driving hub.
-     */
     @Override
     protected void displayDataInternal(String key, Object value) {
         telemetry.addData(key, value);
     }
 
-    /**
-     * Graphs data on the FTC dashboard (leave it blank if you are not using a dashboard.
-     */
     @Override
     protected void graphDataInternal(String key, Object value) {
-        // Optional: add FTC dashboard
+        this.ftcDashboardPacket.put(key, value);
     }
 
-    /**
-     * Logs debug text to Logcat.
-     */
     @Override
     protected void logDebugInternal(String tag, String format, Object... args) {
         RobotLog.dd(tag, format, args);
     }
 
-    /**
-     * Logs information text to Logcat.
-     */
     @Override
-    protected void logInformationInternal(String tag, String format, Object... args) {
-        RobotLog.ii(tag, format, args);
-    }
+    protected void logInformationInternal(String tag, String format, Object... args) { RobotLog.ii(tag, format, args); }
 
-    /**
-     * Logs error text to Logcat.
-     */
     @Override
-    protected void logExceptionInternal(String tag, Exception e, String format, Object... args) {
-        RobotLog.ee(tag, e, format, args);
-    }
+    protected void logExceptionInternal(String tag, Exception e, String format, Object... args) { RobotLog.ee(tag, e, format, args); }
 
-    /**
-     * Writes all the data to the intended destinations.
-     */
     @Override
     protected void flushInternal() {
         // Send telemetry values
+        this.ftcDashboard.sendTelemetryPacket(ftcDashboardPacket);
         this.telemetry.update();
+
+        ftcDashboardPacket = new TelemetryPacket();
     }
 }
 ```

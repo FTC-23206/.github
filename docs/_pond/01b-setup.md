@@ -88,7 +88,7 @@ Now learn how to run and modify the code on the [Getting Started](/pond/getting-
         implementation project(':FtcRobotController')
 
         // Pond Library Reference
-        implementation 'com.automaducks:pond:0.9.1'
+        implementation 'com.automaducks:pond:0.9.2'
     }
     ```
 
@@ -139,11 +139,11 @@ This is not require but Pond is made to work well with FTC dashboard as it can l
         implementation project(':FtcRobotController')
 
         // Pond
-        implementation 'com.automaducks:pond:0.9.1'
+        implementation 'com.automaducks:pond:0.9.2'
 
         // ACME Libraries
         implementation 'com.acmerobotics.roadrunner:core:1.0.1'
-        implementation 'com.acmerobotics.dashboard:dashboard:0.4.16'
+        implementation 'com.acmerobotics.dashboard:dashboard:0.5.1'
     }
     ```
 
